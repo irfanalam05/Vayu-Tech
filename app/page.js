@@ -1,5 +1,8 @@
+'use client';
+import { useEffect, useState } from 'react';
 import Link from 'next/link'
 import {
+  X,
   ArrowDownRight,
   ArrowRight,
   Check,
@@ -10,12 +13,6 @@ import {
   Globe2,
   Sparkles,
 } from 'lucide-react'
-
-export const metadata = {
-  title: 'Vayu Tech — Build Digital. Grow Smarter.',
-  description:
-    'Vayu Tech builds websites, mobile apps, digital experiences and growth solutions for modern businesses.',
-}
 
 const services = [
   {
@@ -69,8 +66,71 @@ const work = [
 ]
 
 export default function Home() {
+  const [showPopup, setShowPopup] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <main className="overflow-hidden bg-[#F8FAFC] text-[#0B172A]">
+      {/* =========================================================
+            ENTRY POPUP / PROJECT CTA
+            Opens automatically after 1.2 seconds
+        ========================================================= */}
+      {showPopup && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#073B6B]/35 px-4 backdrop-blur-md">
+          <div className="relative w-full max-w-lg overflow-hidden rounded-[30px] border border-white/70 bg-white p-8 shadow-[0_30px_100px_rgba(7,59,107,0.25)] sm:p-10">
+
+            {/* Cyan glow */}
+            <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-[#28D8B0]/20 blur-3xl" />
+
+            {/* Close */}
+            <button
+              onClick={() => setShowPopup(false)}
+              className="absolute right-5 top-5 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-[#E2E8F0] bg-white text-[#64748B] transition hover:bg-[#F8FAFC] hover:text-[#073B6B]"
+              aria-label="Close popup"
+            >
+              <X size={17} />
+            </button>
+
+            <div className="relative z-10">
+              <span className="inline-flex rounded-full border border-[#28D8B0]/30 bg-[#28D8B0]/10 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-[#005098]">
+                Let's Build Together
+              </span>
+
+              <h2 className="mt-5 max-w-md text-3xl font-bold leading-tight tracking-tight text-[#0B172A] sm:text-4xl">
+                Have a digital idea in mind?
+              </h2>
+
+              <p className="mt-4 max-w-md text-sm leading-6 text-[#64748B]">
+                Let's turn your idea into a modern website, app, or digital
+                experience built for growth.
+              </p>
+
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/contact"
+                  onClick={() => setShowPopup(false)}
+                  className="btn inline-flex items-center justify-center gap-2 rounded-full bg-[#005098] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#005098]/20"
+                >
+                  Start a Project
+                  <ArrowRight size={16} />
+                </Link>
+
+                <button
+                  onClick={() => setShowPopup(false)}
+                  className="btn rounded-full border border-[#E2E8F0] px-6 py-3 text-sm font-semibold text-[#0B172A]"
+                >
+                  Maybe Later
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {/* =====================================================
               HERO
           ===================================================== */}
@@ -177,7 +237,7 @@ export default function Home() {
 
 
               {/* LEFT FLOATING CARD */}
-              <div className="absolute left-0 top-[34%] hidden -translate-x-2 items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
+              <div className="hero-float absolute left-[10%] top-[30%] hidden items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
 
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E7F8F4] text-[#008D75]">
                   <Code2 className="h-5 w-5" />
@@ -196,7 +256,7 @@ export default function Home() {
 
 
               {/* LEFT LOWER FLOATING CARD */}
-              <div className="absolute bottom-[32%] left-[4%] hidden items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
+              <div className="hero-float-slow absolute bottom-[36%] left-[14%] hidden items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
 
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#EAF3FA] text-[#005098]">
                   <Palette className="h-4 w-4" />
@@ -215,7 +275,7 @@ export default function Home() {
 
 
               {/* RIGHT FLOATING CARD */}
-              <div className="absolute right-0 top-[28%] hidden translate-x-2 items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
+              <div className="hero-float-slow absolute right-[10%] top-[28%] hidden items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
 
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EAF3FA] text-[#005098]">
                   <Smartphone className="h-5 w-5" />
@@ -234,7 +294,7 @@ export default function Home() {
 
 
               {/* RIGHT LOWER FLOATING CARD */}
-              <div className="absolute bottom-[37%] right-[4%] hidden items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
+              <div className="hero-float absolute bottom-[37%] right-[14%] hidden items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
 
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#E7F8F4] text-[#008D75]">
                   <TrendingUp className="h-4 w-4" />
@@ -383,7 +443,7 @@ export default function Home() {
                 return (
                   <div
                     key={service.number}
-                    className="group grid gap-4 py-6 sm:grid-cols-[55px_1fr_35px] sm:items-center"
+                    className="group grid gap-4 rounded-2xl px-4 py-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.04] hover:bg-white hover:shadow-[0_12px_35px_rgba(7,59,107,0.08)] sm:grid-cols-[55px_1fr_35px] sm:items-center"
                   >
 
                     <span className="text-xs font-bold text-[#94A3B8]">
@@ -424,7 +484,7 @@ export default function Home() {
       {/* =====================================================
           PROBLEM / SOLUTION
       ===================================================== */}
-      <section className="bg-white py-20">
+      <section className="bg-white pt-0 pb-12">
 
         <div className="mx-auto w-[min(1200px,calc(100%-40px))]">
 
@@ -474,7 +534,7 @@ export default function Home() {
 
               <div
                 key={index}
-                className="group grid gap-5 rounded-3xl border border-[#E2E8F0] p-6 transition-all duration-300 hover:border-[#9BC8D8] hover:shadow-xl hover:shadow-[#005098]/5 sm:grid-cols-[150px_1fr]"
+                className="group grid gap-5 rounded-3xl border border-[#E2E8F0] p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.06] hover:border-[#9BC8D8] hover:shadow-[0_18px_45px_rgba(7,59,107,0.10)] sm:grid-cols-[150px_1fr]"
               >
 
                 <p className="text-xs font-semibold text-[#94A3B8]">
@@ -504,7 +564,7 @@ export default function Home() {
       {/* =====================================================
           FEATURED WORK
       ===================================================== */}
-      <section className="bg-[#071B30] py-28 text-white">
+      <section className="bg-[#071B30] pt-16 pb-24 text-white">
 
         <div className="mx-auto w-[min(1200px,calc(100%-40px))]">
 
@@ -617,7 +677,7 @@ export default function Home() {
       {/* =====================================================
           VAYU ECOSYSTEM
       ===================================================== */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden py-20">
 
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#28D8B0]/10 blur-[100px]" />
 
@@ -642,15 +702,94 @@ export default function Home() {
           </div>
 
 
-          <div className="relative mx-auto mt-20 h-[430px] max-w-4xl">
+          <div className="relative mx-auto mt-16 h-[400px] max-w-4xl">
 
-            {/* connecting lines */}
-            <div className="absolute left-1/2 top-1/2 hidden h-px w-[70%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#9BC8D8] to-transparent md:block" />
+            {/* CURVED ECOSYSTEM CONNECTORS */}
+            <svg
+              className="pointer-events-none absolute inset-0 z-0 hidden h-full w-full md:block"
+              viewBox="0 0 800 400"
+              fill="none"
+              preserveAspectRatio="none"
+            >
+              {/* Web → Vayu */}
+              <path
+                d="M155 70 C245 70 300 125 336 175"
+                stroke="#9BC8D8"
+                strokeWidth="2"
+                strokeLinecap="round"
+                opacity="0.55"
+              />
 
-            <div className="absolute left-1/2 top-1/2 hidden h-[70%] w-px -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-transparent via-[#9BC8D8] to-transparent md:block" />
+              <path
+                d="M155 70 C245 70 300 125 336 175"
+                stroke="#28D8B0"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeDasharray="1000"
+                className="ecosystem-flow ecosystem-flow-reverse"
+                opacity="0.9"
+              />
+
+              {/* Design → Vayu */}
+              <path
+                d="M155 330 C245 330 300 275 336 225"
+                stroke="#9BC8D8"
+                strokeWidth="2"
+                strokeLinecap="round"
+                opacity="0.55"
+              />
+
+              <path
+                d="M155 330 C245 330 300 275 336 225"
+                stroke="#005098"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeDasharray="1000"
+                className="ecosystem-flow ecosystem-flow-reverse"
+                opacity="0.9"
+              />
+
+              {/* Vayu → Apps */}
+              <path
+                d="M464 175 C500 125 555 70 645 70"
+                stroke="#9BC8D8"
+                strokeWidth="2"
+                strokeLinecap="round"
+                opacity="0.55"
+              />
+
+              <path
+                d="M464 175 C500 125 555 70 645 70"
+                stroke="#28D8B0"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeDasharray="1000"
+                className="ecosystem-flow"
+                opacity="0.9"
+              />
+
+              {/* Vayu → Growth */}
+              <path
+                d="M464 225 C500 275 555 330 645 330"
+                stroke="#9BC8D8"
+                strokeWidth="2"
+                strokeLinecap="round"
+                opacity="0.55"
+              />
+
+              <path
+                d="M464 225 C500 275 555 330 645 330"
+                stroke="#005098"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeDasharray="1000"
+                className="ecosystem-flow"
+                opacity="0.9"
+              />
+            </svg>
 
             {/* center */}
-            <div className="absolute left-1/2 top-1/2 z-10 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border-4 border-white bg-[#005098] text-center text-white shadow-2xl shadow-[#005098]/25">
+            <div className="group absolute left-1/2 top-1/2 z-10 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border-4 border-white bg-[#005098] text-center text-white shadow-2xl shadow-[#005098]/25 transition-all duration-300 ease-out hover:scale-110 hover:shadow-[0_0_45px_rgba(40,216,176,0.35)]">
 
               <Globe2 className="mb-2 h-6 w-6" />
 
@@ -666,19 +805,19 @@ export default function Home() {
 
 
             {[
-              ['Web', 'Websites & platforms', 'top-0 left-1/2 -translate-x-1/2'],
-              ['Apps', 'Mobile experiences', 'bottom-0 left-1/2 -translate-x-1/2'],
-              ['Design', 'UI/UX & branding', 'left-0 top-1/2 -translate-y-1/2'],
-              ['Growth', 'Marketing & social', 'right-0 top-1/2 -translate-y-1/2'],
-            ].map(([title, text, position]) => (
-
+                ['Web', 'Websites & platforms', 'left-0 top-0', Code2],
+                ['Design', 'UI/UX & branding', 'left-0 bottom-0', Palette],
+                ['Apps', 'Mobile experiences', 'right-0 top-0', Smartphone],
+                ['Growth', 'Marketing & social', 'right-0 bottom-0', TrendingUp],
+              ].map(([title, text, position, Icon]) => (
               <div
                 key={title}
-                className={`absolute ${position} w-48 rounded-2xl border border-[#DCE7EF] bg-white p-5 text-center shadow-lg shadow-[#005098]/5`}
+                className={`group absolute ${position} w-40 overflow-hidden rounded-[22px] border border-[#D8E6EF] bg-white/90 p-3.5 text-center shadow-[0_12px_35px_rgba(7,59,107,0.07)] backdrop-blur-xl transition-all duration-300 ease-out hover:scale-[1.04] hover:border-[#28D8B0]/60 hover:shadow-[0_20px_55px_rgba(0,80,152,0.16)]`}
               >
+                <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#28D8B0]/10 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
 
-                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-[#EAF3FA] text-[#005098]">
-                  <Sparkles className="h-4 w-4" />
+                <div className="relative mx-auto flex h-11 w-11 items-center justify-center rounded-2xl border border-[#D8EAF2] bg-gradient-to-br from-[#EAF5FB] to-[#F2FBF8] text-[#005098] shadow-[0_6px_18px_rgba(0,80,152,0.08)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:border-[#28D8B0]/50 group-hover:shadow-[0_8px_24px_rgba(40,216,176,0.18)]">
+                  <Icon className="h-4 w-4" />
                 </div>
 
                 <h3 className="mt-3 text-sm font-bold">
@@ -701,11 +840,11 @@ export default function Home() {
       {/* =====================================================
           PROCESS
       ===================================================== */}
-      <section className="border-y border-[#E2E8F0] bg-white py-28">
+      <section className="border-y border-[#E2E8F0] bg-white pt-10 pb-0">
 
         <div className="mx-auto w-[min(1200px,calc(100%-40px))]">
 
-          <div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]">
+          <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
 
             <div>
 
@@ -738,8 +877,9 @@ export default function Home() {
 
                 <div
                   key={number}
-                  className="grid gap-5 py-7 sm:grid-cols-[60px_180px_1fr] sm:items-center"
+                  className="group relative grid gap-5 overflow-hidden rounded-2xl px-4 py-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#EEF8FC] hover:shadow-[0_14px_40px_rgba(0,80,152,0.10)] sm:grid-cols-[60px_180px_1fr] sm:items-center"
                 >
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_20%_50%,rgba(40,216,176,0.12),transparent_55%)] opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
 
                   <span className="text-xs font-bold text-[#005098]">
                     {number}
@@ -767,7 +907,7 @@ export default function Home() {
       {/* =====================================================
           PRICING
       ===================================================== */}
-      <section className="py-28">
+      <section className="pt-20 pb-16">
 
         <div className="mx-auto w-[min(1000px,calc(100%-40px))]">
 
@@ -789,9 +929,9 @@ export default function Home() {
           </div>
 
 
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
 
-            <div className="rounded-[29px] border border-[#B8D4E8] bg-white p-8 shadow-xl shadow-[#005098]/5">
+            <div className="group rounded-[29px] border border-[#B8D4E8] bg-white p-8 shadow-xl shadow-[#005098]/5 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:border-[#28D8B0]/50 hover:shadow-[0_20px_50px_rgba(0,80,152,0.12)]">
 
               <p className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                 Website
@@ -807,16 +947,16 @@ export default function Home() {
 
               <Link
                 href="/contact"
-                className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#005098]"
+                className="group mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#005098] transition-all duration-300 hover:text-[#073B6B]"
               >
                 Discuss your website
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
 
             </div>
 
 
-            <div className="rounded-[28px] border border-[#E2E8F0] bg-white p-8">
+            <div className="group rounded-[28px] border border-[#E2E8F0] bg-white p-8 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:border-[#28D8B0]/50 hover:shadow-[0_20px_50px_rgba(0,80,152,0.10)]">
 
               <p className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                 Social Media
@@ -841,7 +981,7 @@ export default function Home() {
             </div>
 
 
-            <div className="rounded-[28px] bg-[#071B30] p-8 text-white">
+            <div className="group rounded-[28px] bg-[#071B30] p-8 text-white transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_20px_55px_rgba(40,216,176,0.18)]">
 
               <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                 Other services
@@ -873,10 +1013,9 @@ export default function Home() {
       {/* =====================================================
           FINAL CTA
       ===================================================== */}
-      <section className="px-5 pb-24">
+      <section className="px-5 pt-4 pb-24">
 
-        <div className="relative mx-auto max-w-[1200px] overflow-hidden rounded-[36px] bg-[#005098] px-7 py-20 text-center text-white sm:px-12">
-
+        <div className="relative mx-auto max-w-[1200px] overflow-hidden rounded-[36px] bg-[#005098] px-7 py-16 text-center text-white sm:px-12">
           <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-[#28D8B0]/20 blur-3xl" />
           <div className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-[#073B6B] blur-3xl" />
 
@@ -897,10 +1036,10 @@ export default function Home() {
 
             <Link
               href="/contact"
-              className="mt-9 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#005098] shadow-xl transition hover:-translate-y-1"
+              className="group mt-9 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#005098] shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_15px_35px_rgba(255,255,255,0.25)]"
             >
               Start a conversation
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
 
           </div>

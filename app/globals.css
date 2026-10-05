@@ -136,3 +136,98 @@ button:hover,
 .capability-track:hover {
   animation-play-state: paused;
 }
+
+/* =========================================================
+   HERO FLOATING CARDS
+========================================================= */
+
+.hero-float {
+  animation: hero-float 4.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-float-slow {
+  animation: hero-float-slow 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes hero-float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hero-float,
+  .hero-float-slow {
+    animation: none;
+  }
+}
+
+
+/* =========================================================
+   ECOSYSTEM FLOWING CONNECTORS
+========================================================= */
+
+.ecosystem-flow {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: ecosystem-draw 7s ease-in-out infinite;
+}
+
+.ecosystem-flow-reverse {
+  animation-name: ecosystem-draw-reverse;
+}
+
+@keyframes ecosystem-draw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  45% {
+    stroke-dashoffset: 0;
+  }
+
+  70% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -1000;
+  }
+}
+
+@keyframes ecosystem-draw-reverse {
+  0% {
+    stroke-dashoffset: -1000;
+  }
+
+  45% {
+    stroke-dashoffset: 0;
+  }
+
+  70% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 1000;
+  }
+}

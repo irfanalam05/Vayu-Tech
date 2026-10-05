@@ -4,18 +4,20 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-black border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <footer className="border-t border-[#E2E8F0] bg-[#071B30] text-white">
+      <div className="mx-auto max-w-7xl px-6 pt-14 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Vayu Tech</h3>
-            <p className="text-white/60 mb-4 max-w-md">
+            <h3 className="mb-4 text-2xl font-bold text-white">
+              Vayu Tech
+            </h3>
+            <p className="mb-4 max-w-md text-sm leading-6 text-slate-300">
               Premium website development, app development, and digital solutions that drive business growth.
             </p>
             <a
               href="mailto:vayutech29@gmail.com"
-              className="text-accent hover:text-accent/80 transition-colors"
+              className="inline-flex text-sm font-medium text-[#28D8B0] transition-colors duration-300 hover:text-white"
             >
               vayutech29@gmail.com
             </a>
@@ -23,30 +25,32 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="font-semibold mb-4">Navigation</h4>
-            <ul className="space-y-2 text-white/60">
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-white">
+              Navigation
+            </h4>
+            <ul className="space-y-2 text-sm text-slate-300">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">
+                <Link href="/" className="transition-colors duration-300 hover:text-[#28D8B0]">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
+                <Link href="/services" className="transition-colors duration-300 hover:text-[#28D8B0]">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="hover:text-white transition-colors">
+                <Link href="/work" className="transition-colors duration-300 hover:text-[#28D8B0]">
                   Work
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">
+                <Link href="/about" className="transition-colors duration-300 hover:text-[#28D8B0]">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
+                <Link href="/contact" className="transition-colors duration-300 hover:text-[#28D8B0]">
                   Contact
                 </Link>
               </li>
@@ -55,8 +59,10 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-white/60">
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-white">
+              Services
+            </h4>
+            <ul className="space-y-2 text-sm text-slate-300">
               <li>Website Development</li>
               <li>App Development</li>
               <li>UI/UX Design</li>

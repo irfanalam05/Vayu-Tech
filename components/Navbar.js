@@ -27,8 +27,14 @@ export default function Navbar() {
             className="group flex items-center gap-3"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <div className="relative h-10 w-32">
-              <Image src="/vayu-tech-logo.jpeg" alt="Vayu Tech" fill className="object-contain object-left"priority/>
+            <div className="relative h-10 w-10">
+              <Image
+                src="/logo-vayu.png"
+                alt="Vayu Tech"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
 
             <div className="leading-none">
