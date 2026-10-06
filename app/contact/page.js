@@ -88,7 +88,7 @@ ${formData.message}`
       <section className="px-5 pb-24">
         <div className="mx-auto max-w-[1200px]">
 
-          <div className="grid items-start gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+          <div className="grid items-start gap-6">
 
             {/* Form */}
             <div className="rounded-[30px] border border-[#CBD5E1] bg-white p-7 shadow-[0_18px_50px_rgba(0,80,152,0.05)] sm:p-8 lg:p-9">
@@ -229,7 +229,7 @@ ${formData.message}`
             </div>
 
             {/* Contact info */}
-            <div className="space-y-5">
+            <div className="mt-6 grid items-center gap-4 lg:grid-cols-[1fr_auto]">
 
               <div className="rounded-[30px] bg-[#071B30] p-7 text-white sm:p-8">
                 <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-[#8FF5DF]">
@@ -245,7 +245,7 @@ ${formData.message}`
                   existing digital product, we're here to help.
                 </p>
 
-                <div className="mt-8 space-y-4">
+                <div className="mt-8 grid gap-4 md:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr]">
 
                   <a
                     href="mailto:vayutech29@gmail.com"
@@ -295,61 +295,18 @@ ${formData.message}`
                 </div>
               </div>
 
-              {/* Response card */}
-              <div className="rounded-[30px] border border-[#B8D4E8] bg-white p-7 sm:p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF8FC] text-[#005098]">
-                    <Clock3 className="h-5 w-5" />
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-extrabold">
-                      Quick response
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-6 text-[#64748B]">
-                      We typically respond to project enquiries within
-                      24 hours during business days.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-6 border-t border-[#E2E8F0] pt-5">
-                  <div className="flex items-center gap-2 text-sm font-semibold text-[#005098]">
-                    <Check className="h-4 w-4 text-[#00A887]" />
-                    Clear communication
-                  </div>
-
-                  <div className="mt-3 flex items-center gap-2 text-sm font-semibold text-[#005098]">
-                    <Check className="h-4 w-4 text-[#00A887]" />
-                    Straightforward project discussion
-                  </div>
-                </div>
-              </div>
-
               {/* WhatsApp */}
               <a
                 href="https://wa.me/917303123047"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-[24px] border border-[#B8D4E8] bg-[#EEF8FC] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#28D8B0] hover:shadow-[0_15px_40px_rgba(0,80,152,0.08)]"
+                className="group flex h-20 w-20 items-center justify-center rounded-2xl border border-[#B8D4E8] bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="flex items-center gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-[#005098] shadow-sm">
-                    <MessageCircle className="h-5 w-5" />
-                  </div>
-
-                  <div>
-                    <p className="text-xs text-[#64748B]">
-                      Need a faster reply?
-                    </p>
-                    <p className="mt-1 text-sm font-extrabold text-[#0B172A]">
-                      Chat with us on WhatsApp
-                    </p>
-                  </div>
-                </div>
-
-                <ArrowRight className="h-5 w-5 text-[#005098] transition-transform duration-300 group-hover:translate-x-1" />
+                <img
+                  src="/WhatsApp_logo.png"
+                  alt="WhatsApp"
+                  className="h-12 w-12 object-contain"
+                />
               </a>
             </div>
           </div>

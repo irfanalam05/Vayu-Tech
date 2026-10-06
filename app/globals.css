@@ -187,47 +187,55 @@ button:hover,
 ========================================================= */
 
 .ecosystem-flow {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: ecosystem-draw 7s ease-in-out infinite;
-}
-
-.ecosystem-flow-reverse {
-  animation-name: ecosystem-draw-reverse;
+  stroke: #28D8B0;
+  stroke-width: 3;
+  stroke-linecap: butt;
+  stroke-dasharray: 0 1;
+  animation: ecosystem-draw 3.5s ease-in-out infinite;
 }
 
 @keyframes ecosystem-draw {
   0% {
-    stroke-dashoffset: 1000;
+    stroke-dasharray: 0 1;
   }
 
   45% {
-    stroke-dashoffset: 0;
+    stroke-dasharray: 1 0;
   }
 
   70% {
-    stroke-dashoffset: 0;
+    stroke-dasharray: 1 0;
+  }
+
+  71% {
+    stroke-dasharray: 0 1;
   }
 
   100% {
-    stroke-dashoffset: -1000;
+    stroke-dasharray: 0 1;
   }
 }
 
-@keyframes ecosystem-draw-reverse {
-  0% {
-    stroke-dashoffset: -1000;
+.ecosystem-card {
+  animation: ecosystem-card-pulse 3.5s ease-in-out infinite;
+}
+
+@keyframes ecosystem-card-pulse {
+  0%,
+  44% {
+    transform: scale(1);
+    box-shadow: 0 12px 35px rgba(7, 59, 107, 0.07);
   }
 
-  45% {
-    stroke-dashoffset: 0;
-  }
-
+  45%,
   70% {
-    stroke-dashoffset: 0;
+    transform: scale(1.04);
+    box-shadow: 0 20px 55px rgba(40, 216, 176, 0.18);
   }
 
+  71%,
   100% {
-    stroke-dashoffset: 1000;
+    transform: scale(1);
+    box-shadow: 0 12px 35px rgba(7, 59, 107, 0.07);
   }
 }

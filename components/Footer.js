@@ -63,11 +63,14 @@ export default function Footer() {
               Services
             </h4>
             <ul className="space-y-2 text-sm text-slate-300">
-              <li>Website Development</li>
-              <li>App Development</li>
-              <li>UI/UX Design</li>
-              <li>Digital Marketing</li>
-              <li>Social Media Management</li>
+              <li>Web & App Development</li>
+              <li>SEO / Rank Higher</li>
+              <li>SMO / Social Media Management</li>
+              <li>Meta & Google Ads</li>
+              <li>Brand Promotion</li>
+              <li>CRM Development</li>
+              <li>Influencer Marketing</li>
+              <li>Content Writing & Video Production</li>
             </ul>
           </div>
         </div>

@@ -1,126 +1,273 @@
+import {
+  Code2,
+  Search,
+  Megaphone,
+  Target,
+  TrendingUp,
+  Database,
+  Users,
+  Video,
+} from 'lucide-react'
+
 export const metadata = {
   title: 'About Us - Vayu Tech',
-  description: 'Learn about Vayu Tech - a premium digital agency specializing in website and app development.',
+  description:
+    'Learn about Vayu Tech - a digital agency helping businesses build, grow, and strengthen their digital presence.',
 }
 
 export default function About() {
+  const services = [
+    {
+      title: 'Web & App Development',
+      icon: Code2,
+      description:
+        'Modern, responsive websites and mobile applications built for performance, scalability, and real business needs.',
+    },
+    {
+      title: 'SEO / Rank Higher',
+      icon: Search,
+      description:
+        'Search engine optimization strategies designed to improve visibility, attract relevant traffic, and build long-term online growth.',
+    },
+    {
+      title: 'SMO / Social Media Management',
+      icon: Megaphone,
+      description:
+        'Strategic social media management that helps businesses build a consistent presence, engage audiences, and grow their community.',
+    },
+    {
+      title: 'Meta & Google Ads',
+      icon: Target,
+      description:
+        'Performance-focused paid advertising campaigns designed to reach the right audience and generate meaningful business results.',
+    },
+    {
+      title: 'Brand Promotion',
+      icon: TrendingUp,
+      description:
+        'Digital brand promotion strategies that help businesses increase awareness, communicate their value, and stand out online.',
+    },
+    {
+      title: 'CRM Development',
+      icon: Database,
+      description:
+        'Custom CRM solutions that organize customer data, streamline workflows, and help teams manage their business more effectively.',
+    },
+    {
+      title: 'Influencer Marketing',
+      icon: Users,
+      description:
+        'Influencer-led campaigns that connect brands with relevant audiences through authentic and engaging digital content.',
+    },
+    {
+      title: 'Content Writing & Video Production',
+      icon: Video,
+      description:
+        'Creative content and video solutions designed to communicate ideas clearly and create stronger connections with your audience.',
+    },
+  ]
+
+  const approach = [
+    {
+      title: 'Understand',
+      description:
+        'We first understand your business, goals, audience, and the challenges you want to solve.',
+    },
+    {
+      title: 'Plan',
+      description:
+        'We turn those requirements into a clear strategy with practical solutions and focused execution.',
+    },
+    {
+      title: 'Build',
+      description:
+        'Our team combines technology, design, and creativity to build solutions that are reliable and effective.',
+    },
+    {
+      title: 'Grow',
+      description:
+        'We focus on long-term value, helping your digital presence evolve as your business grows.',
+    },
+  ]
+
   return (
-    <main className="pt-16">
-      {/* Hero Section */}
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">About Vayu Tech</h1>
-          <p className="text-xl text-white/60">
-            Building exceptional digital experiences for businesses in India and beyond
+    <main className="overflow-hidden bg-[#F8FAFC] text-[#0B172A]">
+      {/* Hero */}
+      <section className="relative overflow-hidden px-5 pb-20 pt-36 sm:pt-40">
+        <div className="pointer-events-none absolute left-1/2 top-10 h-[420px] w-[700px] -translate-x-1/2 rounded-full bg-[#28D8B0]/10 blur-[120px]" />
+
+        <div className="relative mx-auto max-w-[900px] text-center">
+          <div className="mb-5 inline-flex items-center rounded-full border border-[#B8D4E8] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#005098] shadow-sm">
+            About Vayu Tech
+          </div>
+
+          <h1 className="text-5xl font-extrabold tracking-[-0.04em] sm:text-6xl lg:text-7xl">
+            Building digital
+            <br />
+            <span className="text-[#005098]">experiences that matter.</span>
+          </h1>
+
+          <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-[#64748B] sm:text-lg">
+            We help businesses build, grow, and strengthen their digital
+            presence through technology, design, and digital marketing.
           </p>
         </div>
       </section>
 
-      {/* Company Overview */}
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Who We Are</h2>
-          <div className="space-y-6 text-lg text-white/60">
-            <p>
-              Vayu Tech is a digital agency focused on creating modern, high-quality websites, mobile applications, and digital solutions. We combine technical expertise with creative design to deliver products that not only look great but perform exceptionally.
-            </p>
-            <p>
-              Based in India, we work with businesses of all sizes to establish and strengthen their digital presence. Whether you need a professional website, a mobile app, or a complete digital strategy, we bring a fresh perspective and proven execution.
-            </p>
-            <p>
-              Our approach is straightforward: understand your goals, design thoughtfully, build with quality, and deliver results. We believe in clear communication, transparent processes, and creating solutions that truly serve your business needs.
-            </p>
+      {/* Who We Are */}
+      <section className="px-5 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#28BFA0]">
+                Who We Are
+              </p>
+
+              <h2 className="text-3xl font-extrabold tracking-[-0.03em] sm:text-4xl">
+                A digital partner focused on meaningful results.
+              </h2>
+            </div>
+
+            <div className="max-w-3xl space-y-5 text-base leading-7 text-[#64748B] sm:text-lg">
+              <p>
+                Vayu Tech is a digital agency focused on creating modern,
+                high-quality digital experiences and solutions for businesses.
+                We combine technology, creative thinking, and digital strategy
+                to help brands build a stronger presence online.
+              </p>
+
+              <p>
+                Based in India, we work with businesses of different sizes and
+                industries. From websites and applications to marketing,
+                content, and customer-focused digital solutions, we bring
+                different capabilities together under one team.
+              </p>
+
+              <p>
+                Our approach is simple: understand the business, identify the
+                right opportunity, build thoughtfully, and focus on outcomes
+                that create real value.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* What We Do */}
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">What We Do</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-6 border border-white/10 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">Development</h3>
-              <p className="text-white/60">
-                Custom websites and mobile apps built with modern frameworks and best practices for performance, security, and scalability.
-              </p>
-            </div>
-            <div className="p-6 border border-white/10 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">Design</h3>
-              <p className="text-white/60">
-                User-centered UI/UX design that balances aesthetics with functionality, creating intuitive experiences that users love.
-              </p>
-            </div>
-            <div className="p-6 border border-white/10 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">Marketing</h3>
-              <p className="text-white/60">
-                Digital marketing strategies including SEO, content marketing, and paid campaigns to increase your online visibility.
-              </p>
-            </div>
-            <div className="p-6 border border-white/10 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">Social Media</h3>
-              <p className="text-white/60">
-                Strategic social media management with content creation and community engagement across multiple platforms.
-              </p>
-            </div>
+      <section className="px-5 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="mb-10 max-w-3xl">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#28BFA0]">
+              What We Do
+            </p>
+
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] sm:text-4xl">
+              Multiple digital capabilities. One focused team.
+            </h2>
+
+            <p className="mt-4 text-base leading-7 text-[#64748B]">
+              From building digital products to growing your online presence,
+              we provide the capabilities businesses need to move forward.
+            </p>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="group rounded-[26px] border border-[#B8D4E8] bg-white p-7 shadow-[0_15px_40px_rgba(0,80,152,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,80,152,0.09)]"
+              >
+                <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-xl bg-[#EEF8FC] text-[#005098] transition-colors duration-300 group-hover:bg-[#28D8B0] group-hover:text-[#071B30]">
+                  {(() => {
+                    const Icon = service.icon
+                    return <Icon className="h-5 w-5" />
+                  })()}
+                </div>
+
+                <h3 className="text-lg font-extrabold text-[#0B172A]">
+                  {service.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-[#64748B]">
+                  {service.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Our Approach */}
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Approach</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Modern Technology</h3>
-              <p className="text-white/60">
-                We use current, proven technologies and frameworks that ensure your project is built on a solid foundation with long-term viability.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Quality First</h3>
-              <p className="text-white/60">
-                Every project undergoes thorough testing and quality assurance. We deliver clean, maintainable code and polished user experiences.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Clear Communication</h3>
-              <p className="text-white/60">
-                We believe in transparent, direct communication throughout the project. You know what&apos;s happening, when it&apos;s happening, and why.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Business-Focused</h3>
-              <p className="text-white/60">
-                Beautiful design and clean code matter, but what matters most is delivering solutions that drive real business results for you.
-              </p>
-            </div>
+      <section className="px-5 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="mb-10 text-center">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#28BFA0]">
+              Our Approach
+            </p>
+
+            <h2 className="text-3xl font-extrabold tracking-[-0.03em] sm:text-4xl">
+              Simple process. Focused execution.
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#64748B]">
+              We keep the process clear and collaborative so every project
+              moves from idea to execution with purpose.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {approach.map((item, index) => (
+              <div
+                key={item.title}
+                className="rounded-[26px] border border-[#B8D4E8] bg-white p-7 shadow-[0_15px_40px_rgba(0,80,152,0.04)]"
+              >
+                <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-full bg-[#005098] text-sm font-bold text-white">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+
+                <h3 className="text-lg font-extrabold">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-[#64748B]">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Location & Contact Info */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Get In Touch</h2>
-          <div className="space-y-4 text-lg">
-            <p className="text-white/60">
-              <span className="text-white font-semibold">Location:</span> India
+      {/* CTA */}
+      <section className="px-5 pb-24">
+        <div className="relative mx-auto max-w-[1200px] overflow-hidden rounded-[36px] bg-[#005098] px-7 py-16 text-center text-white sm:px-12">
+          <div className="pointer-events-none absolute -left-20 -top-24 h-64 w-64 rounded-full bg-[#28D8B0]/25 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-[#28D8B0]/20 blur-3xl" />
+
+          <div className="relative">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#8FF5DF]">
+              Let&apos;s work together
             </p>
-            <p className="text-white/60">
-              <span className="text-white font-semibold">Email:</span>{' '}
-              <a href="mailto:vayutech29@gmail.com" className="text-accent hover:text-accent/80">
-                vayutech29@gmail.com
-              </a>
+
+            <h2 className="mx-auto max-w-2xl text-3xl font-extrabold tracking-[-0.03em] sm:text-5xl">
+              Have an idea?
+              <br />
+              Let&apos;s make it real.
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-white/70">
+              Tell us what you&apos;re building and let&apos;s find the right
+              digital solution for your business.
             </p>
-          </div>
-          <div className="mt-8">
+
             <a
               href="/contact"
-              className="inline-block px-8 py-3 bg-accent text-white rounded-md hover:bg-accent/90 transition-colors font-semibold"
+              className="group mt-8 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#005098] shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03]"
             >
               Start a Project
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
             </a>
           </div>
         </div>

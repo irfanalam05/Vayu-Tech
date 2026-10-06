@@ -12,32 +12,62 @@ import {
   TrendingUp,
   Globe2,
   Sparkles,
+  Search,
+  Megaphone,
+  Target,
+  Database,
+  Users,
+  Video,
 } from 'lucide-react'
 
 const services = [
   {
     number: '01',
-    title: 'Web Development',
+    title: 'Web & App Development',
     icon: Code2,
-    text: 'High-performance websites and web applications built around your business.',
+    text: 'Modern, responsive websites and mobile applications built around your business goals.',
   },
   {
     number: '02',
-    title: 'Digital Marketing',
-    icon: TrendingUp,
-    text: 'Strategies that help your business become more visible and reach the right audience.',
+    title: 'SEO / Rank Higher',
+    icon: Search,
+    text: 'Search-focused strategies that improve visibility and help the right customers discover your business.',
   },
   {
     number: '03',
-    title: 'App Development',
-    icon: Smartphone,
-    text: 'Modern mobile experiences designed for real users and real business needs.',
+    title: 'SMO / Social Media Management',
+    icon: Megaphone,
+    text: 'Consistent social media management that keeps your brand active, recognizable and connected.',
   },
   {
     number: '04',
-    title: 'Branding & UI/UX',
-    icon: Palette,
-    text: 'Interfaces and visual systems that make your digital presence memorable.',
+    title: 'Meta & Google Ads',
+    icon: Target,
+    text: 'Targeted paid campaigns designed to reach the right audience and generate meaningful results.',
+  },
+  {
+    number: '05',
+    title: 'Brand Promotion',
+    icon: TrendingUp,
+    text: 'Creative promotional strategies that strengthen your brand presence and connect with your audience.',
+  },
+  {
+    number: '06',
+    title: 'CRM Development',
+    icon: Database,
+    text: 'Custom CRM solutions that organize customer relationships, workflows and business operations.',
+  },
+  {
+    number: '07',
+    title: 'Influencer Marketing',
+    icon: Users,
+    text: 'Influencer-led campaigns that connect your brand with relevant audiences and build trust.',
+  },
+  {
+    number: '08',
+    title: 'Content Writing & Video Production',
+    icon: Video,
+    text: 'Engaging written and visual content created to communicate your brand and drive attention.',
   },
 ]
 
@@ -134,352 +164,317 @@ export default function Home() {
       {/* =====================================================
               HERO
           ===================================================== */}
-          <section className="relative min-h-[940px] overflow-hidden bg-[#F8FAFC] pt-28 sm:pt-32">
+          <section className="relative overflow-hidden bg-[#F8FAFC] px-5 pb-8 pt-28 sm:pt-32">
 
-            {/* BACKGROUND GLOW */}
-            <div className="pointer-events-none absolute inset-0">
-              <div className="absolute left-1/2 top-[-180px] h-[650px] w-[900px] -translate-x-1/2 rounded-full bg-[#28D8B0]/10 blur-[120px]" />
-              <div className="absolute left-[8%] top-[28%] h-[420px] w-[420px] rounded-full bg-[#005098]/8 blur-[120px]" />
-              <div className="absolute right-[-100px] top-[32%] h-[500px] w-[500px] rounded-full bg-[#28D8B0]/8 blur-[120px]" />
+            {/* Soft background glow */}
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+              <div className="absolute left-1/2 top-[-180px] h-[620px] w-[900px] -translate-x-1/2 rounded-full bg-[#28D8B0]/10 blur-[120px]" />
+
+              <div className="absolute left-[-120px] top-[38%] h-[420px] w-[420px] rounded-full bg-[#005098]/[0.07] blur-[120px]" />
+
+              <div className="absolute right-[-120px] top-[35%] h-[450px] w-[450px] rounded-full bg-[#28D8B0]/[0.07] blur-[120px]" />
             </div>
 
-            {/* SUBTLE GRID */}
+            {/* Subtle grid */}
             <div
-              className="pointer-events-none absolute inset-0 opacity-[0.28]"
+              className="pointer-events-none absolute inset-0 opacity-[0.22]"
               style={{
                 backgroundImage: `
-                  linear-gradient(rgba(0,80,152,.06) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(0,80,152,.06) 1px, transparent 1px)
+                  linear-gradient(rgba(0,80,152,.055) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(0,80,152,.055) 1px, transparent 1px)
                 `,
                 backgroundSize: '72px 72px',
-                maskImage: 'radial-gradient(circle at center, black 20%, transparent 75%)',
+                maskImage:
+                  'radial-gradient(circle at center, black 15%, transparent 72%)',
                 WebkitMaskImage:
-                  'radial-gradient(circle at center, black 20%, transparent 75%)',
+                  'radial-gradient(circle at center, black 15%, transparent 72%)',
               }}
             />
 
-            {/* LARGE SOFT ORBIT */}
-            <div className="pointer-events-none absolute left-1/2 top-[38%] h-[680px] w-[680px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#005098]/[0.06]" />
+            {/* Orbital rings */}
+            <div className="pointer-events-none absolute left-1/2 top-[46%] h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#005098]/[0.06]" />
 
-            <div className="relative mx-auto flex min-h-[810px] w-[min(1280px,calc(100%-32px))] flex-col items-center justify-center text-center">
+            <div className="pointer-events-none absolute left-1/2 top-[46%] h-[820px] w-[820px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#28D8B0]/[0.05]" />
 
-              {/* EYEBROW */}
-              <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D5E5ED] bg-white/80 px-5 py-2.5 shadow-[0_8px_30px_rgba(15,23,42,.05)] backdrop-blur-xl">
+            <div className="relative mx-auto flex min-h-[620px] w-[min(1280px,100%)] flex-col items-center justify-center text-center">
 
-                <span className="h-2 w-2 rounded-full bg-[#28D8B0] shadow-[0_0_12px_rgba(40,216,176,.8)]" />
-
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#005098]">
-                  Full-service digital technology partner
-                </span>
-
-              </div>
-
-
-              {/* MAIN HEADLINE */}
-              <h1 className="relative z-10 max-w-[1050px] text-[52px] font-bold leading-[0.92] tracking-[-0.065em] text-[#0B172A] sm:text-[72px] md:text-[92px] lg:text-[112px]">
-
-                Building
-
-                <br />
-
-                <span className="text-[#005098]">
-                  Digital
-                </span>
-
-                <br />
-
-                Experiences
-
-                <br />
-
-                <span className="relative inline-block">
-
-                  That Move
-                  <span className="bg-gradient-to-r from-[#005098] via-[#087E92] to-[#28D8B0] bg-clip-text text-transparent">
-                    {" "}Businesses.
-                  </span>
-
-                  {/* underline */}
-                  <span className="absolute -bottom-3 left-[12%] right-[4%] h-[2px] rounded-full bg-gradient-to-r from-[#005098] to-[#28D8B0] sm:-bottom-4" />
-
-                </span>
-
-              </h1>
-
-
-              {/* DESCRIPTION */}
-              <p className="relative z-10 mx-auto mt-7 max-w-[650px] text-sm leading-7 text-[#64748B] sm:text-base md:text-lg">
-                We design and build websites, mobile apps and digital experiences
-                that help businesses look credible, work smarter and grow online.
-              </p>
-
-
-              {/* CTA */}
-              <div className="relative z-10 mt-8 flex flex-wrap justify-center gap-3">
-
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-3 rounded-full bg-[#005098] px-7 py-3.5 text-sm font-bold text-white shadow-[0_15px_35px_rgba(0,80,152,.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#073B6B]"
-                >
-                  Start a Project
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
-
-                <Link
-                  href="/work"
-                  className="group inline-flex items-center gap-2 rounded-full border border-[#CBD5E1] bg-white/80 px-7 py-3.5 text-sm font-bold text-[#0B172A] shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#005098]/40 hover:text-[#005098]"
-                >
-                  Explore our work
-                  <ArrowDownRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1" />
-                </Link>
-
-              </div>
-
-
-              {/* LEFT FLOATING CARD */}
-              <div className="hero-float absolute left-[10%] top-[30%] hidden items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
-
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E7F8F4] text-[#008D75]">
+              {/* Floating service - left */}
+              <div className="hero-float absolute left-[3%] top-[25%] hidden items-center gap-3 rounded-[20px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_18px_45px_rgba(7,59,107,.10)] backdrop-blur-xl xl:flex">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EAF3FA] text-[#005098]">
                   <Code2 className="h-5 w-5" />
                 </div>
 
                 <div>
                   <p className="text-[9px] font-bold uppercase tracking-[.14em] text-[#94A3B8]">
-                    Web
+                    Development
                   </p>
                   <p className="mt-1 text-sm font-bold text-[#0B172A]">
-                    Web Development
+                    Web & App
                   </p>
                 </div>
-
               </div>
 
-
-              {/* LEFT LOWER FLOATING CARD */}
-              <div className="hero-float-slow absolute bottom-[36%] left-[14%] hidden items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
-
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#EAF3FA] text-[#005098]">
-                  <Palette className="h-4 w-4" />
-                </div>
-
-                <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[.14em] text-[#94A3B8]">
-                    Design
-                  </p>
-                  <p className="mt-1 text-xs font-bold text-[#0B172A]">
-                    UI / UX
-                  </p>
-                </div>
-
-              </div>
-
-
-              {/* RIGHT FLOATING CARD */}
-              <div className="hero-float-slow absolute right-[10%] top-[28%] hidden items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
-
+              {/* Floating service - right */}
+              <div className="hero-float-slow absolute right-[3%] top-[15%] hidden items-center gap-3 rounded-[20px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_18px_45px_rgba(7,59,107,.10)] backdrop-blur-xl xl:flex">
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EAF3FA] text-[#005098]">
-                  <Smartphone className="h-5 w-5" />
+                  <Search className="h-5 w-5" />
                 </div>
 
                 <div>
                   <p className="text-[9px] font-bold uppercase tracking-[.14em] text-[#94A3B8]">
-                    Mobile
+                    Visibility
                   </p>
                   <p className="mt-1 text-sm font-bold text-[#0B172A]">
-                    App Development
+                    SEO / Rank Higher
                   </p>
                 </div>
-
               </div>
 
-
-              {/* RIGHT LOWER FLOATING CARD */}
-              <div className="hero-float absolute bottom-[37%] right-[14%] hidden items-center gap-3 rounded-[22px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_20px_50px_rgba(7,59,107,.12)] backdrop-blur-xl xl:flex">
-
+              {/* Floating service - lower left */}
+              <div className="hero-float-slow absolute bottom-[33%] left-[8%] hidden items-center gap-3 rounded-[20px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_18px_45px_rgba(7,59,107,.10)] backdrop-blur-xl xl:flex">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#E7F8F4] text-[#008D75]">
-                  <TrendingUp className="h-4 w-4" />
+                  <Megaphone className="h-4 w-4" />
                 </div>
 
                 <div>
                   <p className="text-[9px] font-bold uppercase tracking-[.14em] text-[#94A3B8]">
-                    Growth
+                    Social
                   </p>
                   <p className="mt-1 text-xs font-bold text-[#0B172A]">
-                    Digital Growth
+                    Social Media
                   </p>
                 </div>
+              </div>
+
+              {/* Floating service - lower right */}
+              <div className="hero-float absolute bottom-[38%] right-[8%] hidden items-center gap-3 rounded-[20px] border border-white bg-white/85 px-4 py-3 text-left shadow-[0_18px_45px_rgba(7,59,107,.10)] backdrop-blur-xl xl:flex">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#E7F8F4] text-[#008D75]">
+                  <Target className="h-4 w-4" />
+                </div>
+
+                <div>
+                  <p className="text-[9px] font-bold uppercase tracking-[.14em] text-[#94A3B8]">
+                    Advertising
+                  </p>
+                  <p className="mt-1 text-xs font-bold text-[#0B172A]">
+                    Meta & Google Ads
+                  </p>
+                </div>
+              </div>
+
+              {/* Small orbit points */}
+              <div className="absolute left-[19%] top-[22%] hidden h-3 w-3 rounded-full bg-[#28D8B0] shadow-[0_0_18px_rgba(40,216,176,.7)] xl:block" />
+
+              <div className="absolute right-[20%] top-[27%] hidden h-2.5 w-2.5 rounded-full bg-[#005098] shadow-[0_0_16px_rgba(0,80,152,.5)] xl:block" />
+
+              <div className="absolute bottom-[27%] left-[24%] hidden h-2 w-2 rounded-full bg-[#005098]/60 xl:block" />
+
+              <div className="absolute bottom-[29%] right-[24%] hidden h-2.5 w-2.5 rounded-full bg-[#28D8B0]/70 xl:block" />
+
+              {/* Main hero */}
+              <div className="relative z-10 max-w-[900px]">
+
+                {/* Eyebrow */}
+                <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#B8D4E8] bg-white/85 px-5 py-2.5 shadow-[0_8px_30px_rgba(15,23,42,.05)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#28D8B0]">
+                  <Sparkles className="h-3.5 w-3.5 text-[#28D8B0]" />
+
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#005098]">
+                    What we build
+                  </span>
+                </div>
+
+                {/* Heading */}
+                <h1 className="text-[54px] font-bold leading-[0.94] tracking-[-0.065em] text-[#0B172A] sm:text-[72px] md:text-[88px] lg:text-[104px]">
+                  One team.
+                  <br />
+
+                  Multiple digital
+                  <br />
+
+                  <span className="bg-gradient-to-r from-[#005098] via-[#087E92] to-[#28D8B0] bg-clip-text text-transparent">
+                    possibilities.
+                  </span>
+                </h1>
+
+                {/* Description */}
+                <p className="mx-auto mt-7 max-w-[680px] text-sm leading-7 text-[#64748B] sm:text-base md:text-lg">
+                  From your first idea to a launched product, we bring strategy,
+                  design and technology together.
+                </p>
+
+                {/* CTA */}
+                <div className="mt-8 flex flex-wrap justify-center gap-3">
+
+                  <Link
+                    href="/services"
+                    className="group inline-flex items-center gap-3 rounded-full bg-[#005098] px-7 py-3.5 text-sm font-bold text-white shadow-[0_15px_35px_rgba(0,80,152,.20)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#073B6B] hover:shadow-[0_20px_40px_rgba(0,80,152,.25)]"
+                  >
+                    Explore services
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
+
+                  <Link
+                    href="/contact"
+                    className="group inline-flex items-center gap-2 rounded-full border border-[#CBD5E1] bg-white/85 px-7 py-3.5 text-sm font-bold text-[#0B172A] shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#005098]/40 hover:text-[#005098]"
+                  >
+                    Start a Project
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
+
+                </div>
+
+                {/* Moving Capability Strip */}
+                <div className="relative left-1/2 mt-12 w-screen -translate-x-1/2 overflow-hidden">
+
+                  {/* Left fade */}
+                  <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#F8FAFC] to-transparent" />
+
+                  {/* Right fade */}
+                  <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#F8FAFC] to-transparent" />
+
+                  <div className="flex w-max animate-marquee gap-3">
+
+                    {[
+                      ['Web & App Development', Code2],
+                      ['SEO / Rank Higher', Search],
+                      ['SMO / Social Media', Megaphone],
+                      ['Meta & Google Ads', Target],
+                      ['Brand Promotion', TrendingUp],
+                      ['CRM Development', Database],
+                      ['Influencer Marketing', Users],
+                      ['Content & Video Production', Video],
+
+                      // Duplicate for seamless loop
+                      ['Web & App Development', Code2],
+                      ['SEO / Rank Higher', Search],
+                      ['SMO / Social Media', Megaphone],
+                      ['Meta & Google Ads', Target],
+                      ['Brand Promotion', TrendingUp],
+                      ['CRM Development', Database],
+                      ['Influencer Marketing', Users],
+                      ['Content & Video Production', Video],
+                    ].map(([label, Icon], index) => (
+                      <div
+                        key={`${label}-${index}`}
+                        className="group inline-flex shrink-0 items-center gap-2 rounded-full border border-[#E2E8F0] bg-white/80 px-5 py-3 text-xs font-semibold text-[#64748B] shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#9BC8D8] hover:text-[#005098]"
+                      >
+                        <Icon className="h-3.5 w-3.5 text-[#005098] transition-transform duration-300 group-hover:scale-110" />
+                        {label}
+                      </div>
+                    ))}
+
+                  </div>
+
+                  <style jsx>{`
+                    @keyframes marquee {
+                      from {
+                        transform: translateX(0);
+                      }
+                      to {
+                        transform: translateX(-50%);
+                      }
+                    }
+
+                    .animate-marquee {
+                      animation: marquee 32s linear infinite;
+                    }
+                  `}</style>
+
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+      {/* =====================================================
+              DIGITAL CAPABILITIES
+          ===================================================== */}
+          <section className="relative bg-[#F8FAFC] pt-4 pb-16 sm:pt-6 sm:pb-20">
+
+            <div className="mx-auto w-[min(1200px,calc(100%-40px))]">
+
+              {/* Section heading */}
+              <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
+
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#005098]">
+                  Our digital capabilities
+                </p>
+
+                <h2 className="mt-4 text-4xl font-bold leading-tight tracking-[-0.04em] text-[#0B172A] sm:text-5xl">
+                  Everything your business needs
+                  <br className="hidden sm:block" />
+                  <span className="text-[#005098]"> to grow digitally.</span>
+                </h2>
+
+                <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#64748B] sm:text-base">
+                  From development and marketing to automation and content,
+                  we bring the right digital capabilities together.
+                </p>
 
               </div>
 
 
-              {/* SMALL CENTER FLOATING BADGES */}
-              <div className="absolute left-[22%] top-[19%] hidden h-9 w-9 items-center justify-center rounded-xl border border-white bg-white/80 text-[#005098] shadow-lg backdrop-blur-xl xl:flex">
-                <Sparkles className="h-4 w-4" />
-              </div>
+              {/* Services grid */}
+              <div className="grid gap-4 md:grid-cols-2">
 
-              <div className="absolute right-[22%] top-[20%] hidden h-9 w-9 items-center justify-center rounded-xl border border-white bg-white/80 text-[#008D75] shadow-lg backdrop-blur-xl xl:flex">
-                <Globe2 className="h-4 w-4" />
+                {services.map((service) => {
+                  const Icon = service.icon
+
+                  return (
+                    <div
+                      key={service.number}
+                      className="group relative overflow-hidden rounded-[24px] border border-[#E2E8F0] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#9BC8D8] hover:shadow-[0_18px_45px_rgba(7,59,107,0.09)]"
+                    >
+
+                      {/* Hover glow */}
+                      <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#28D8B0]/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+
+                      <div className="relative flex items-start gap-5">
+
+                        {/* Number + Icon */}
+                        <div className="shrink-0">
+
+                          <span className="text-xs font-bold tracking-[0.12em] text-[#94A3B8]">
+                            {service.number}
+                          </span>
+
+                          <div className="mt-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#EAF3FA] text-[#005098] transition-all duration-300 group-hover:bg-[#005098] group-hover:text-white">
+                            <Icon className="h-5 w-5" />
+                          </div>
+
+                        </div>
+
+
+                        {/* Content */}
+                        <div className="min-w-0 flex-1">
+
+                          <div className="flex items-start justify-between gap-3">
+
+                            <h3 className="text-xl font-bold tracking-[-0.02em] text-[#0B172A] transition-colors group-hover:text-[#005098] sm:text-2xl">
+                              {service.title}
+                            </h3>
+
+                            <ArrowDownRight className="mt-1 h-5 w-5 shrink-0 text-[#94A3B8] transition-all duration-300 group-hover:translate-x-1 group-hover:translate-y-1 group-hover:text-[#005098]" />
+
+                          </div>
+
+                          <p className="mt-3 max-w-xl text-sm leading-6 text-[#64748B]">
+                            {service.text}
+                          </p>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                  )
+                })}
+
               </div>
 
             </div>
 
           </section>
-
-      {/* =====================================================
-          CAPABILITY STRIP
-      ===================================================== */}
-      <section className="overflow-hidden border-y border-[#E2E8F0] bg-white">
-
-        <div className="flex h-[72px] items-center">
-
-          {/* FIXED LABEL */}
-          <div className="relative z-10 flex h-full shrink-0 items-center border-r border-[#E2E8F0] bg-white px-6 sm:px-10">
-            <span className="whitespace-nowrap text-[10px] font-bold uppercase tracking-[.2em] text-[#64748B]">
-              Vayu Tech capabilities
-            </span>
-          </div>
-
-          {/* ROTATING STRIP */}
-          <div className="relative flex min-w-0 flex-1 overflow-hidden">
-
-            {/* soft fade edges */}
-            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-white to-transparent" />
-            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-white to-transparent" />
-
-            <div className="capability-track flex shrink-0 items-center">
-
-              {/* FIRST SET */}
-              {[
-                'Web',
-                'Apps',
-                'UI/UX',
-                'Branding',
-                'Marketing',
-                'Social Media',
-              ].map((item) => (
-                <div
-                  key={`first-${item}`}
-                  className="flex w-[190px] shrink-0 items-center justify-center whitespace-nowrap"
-                >
-                  <span className="mx-4 h-1.5 w-1.5 shrink-0 rounded-full bg-[#28D8B0]" />
-                  <span className="text-xs font-semibold text-[#334155]">
-                    {item}
-                  </span>
-                </div>
-              ))}
-
-              {/* DUPLICATE SET FOR CONTINUOUS LOOP */}
-              {[
-                'Web',
-                'Apps',
-                'UI/UX',
-                'Branding',
-                'Marketing',
-                'Social Media',
-              ].map((item) => (
-                <div
-                  key={`second-${item}`}
-                  className="flex w-[190px] shrink-0 items-center justify-center whitespace-nowrap"
-                >
-                  <span className="mx-4 h-1.5 w-1.5 shrink-0 rounded-full bg-[#28D8B0]" />
-                  <span className="text-xs font-semibold text-[#334155]">
-                    {item}
-                  </span>
-                </div>
-              ))}
-
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =====================================================
-          WHAT WE BUILD
-      ===================================================== */}
-      <section className="relative py-20">
-
-        <div className="mx-auto w-[min(1200px,calc(100%-40px))]">
-
-          <div className="grid items-start gap-12 lg:grid-cols-[.72fr_1.28fr]">
-
-            <div className="lg:sticky lg:top-32 lg:h-fit">
-
-              <p className="text-xs font-bold uppercase tracking-[.2em] text-[#005098]">
-                What we build
-              </p>
-
-              <h2 className="mt-5 text-4xl font-bold leading-tight tracking-[-.035em] sm:text-5xl">
-                One team.
-                <br />
-                Multiple digital
-                <br />
-                possibilities.
-              </h2>
-
-              <p className="mt-6 max-w-sm leading-7 text-[#64748B]">
-                From your first idea to a launched product, we bring
-                strategy, design and technology together.
-              </p>
-
-              <Link
-                href="/services"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-[#005098]"
-              >
-                Explore services
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-
-            </div>
-
-
-            <div className="divide-y divide-[#E2E8F0] border-y border-[#E2E8F0]">
-
-              {services.map((service) => {
-                const Icon = service.icon
-
-                return (
-                  <div
-                    key={service.number}
-                    className="group grid gap-4 rounded-2xl px-4 py-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.04] hover:bg-white hover:shadow-[0_12px_35px_rgba(7,59,107,0.08)] sm:grid-cols-[55px_1fr_35px] sm:items-center"
-                  >
-
-                    <span className="text-xs font-bold text-[#94A3B8]">
-                      {service.number}
-                    </span>
-
-                    <div className="flex gap-5">
-
-                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EAF3FA] text-[#005098] sm:flex">
-                        <Icon className="h-5 w-5" />
-                      </div>
-
-                      <div>
-                        <h3 className="text-2xl font-bold transition-colors group-hover:text-[#005098]">
-                          {service.title}
-                        </h3>
-
-                        <p className="mt-2 max-w-xl text-sm leading-6 text-[#64748B]">
-                          {service.text}
-                        </p>
-                      </div>
-
-                    </div>
-
-                    <ArrowDownRight className="hidden h-5 w-5 text-[#94A3B8] transition-all group-hover:translate-x-1 group-hover:translate-y-1 group-hover:text-[#005098] sm:block" />
-
-                  </div>
-                )
-              })}
-
-            </div>
-
-          </div>
-        </div>
-      </section>
-
 
       {/* =====================================================
           PROBLEM / SOLUTION
@@ -488,7 +483,7 @@ export default function Home() {
 
         <div className="mx-auto w-[min(1200px,calc(100%-40px))]">
 
-          <div className="mb-10 max-w-3xl">
+          <div className="mx-auto mb-10 max-w-3xl text-center">
 
             <p className="text-xs font-bold uppercase tracking-[.2em] text-[#005098]">
               Beyond the deliverable
@@ -603,7 +598,7 @@ export default function Home() {
               >
 
                 <div
-                  className={`relative min-h-[330px] overflow-hidden bg-gradient-to-br ${project.gradient}`}
+                  className={`relative min-h-[280px] overflow-hidden bg-gradient-to-br ${project.gradient}`}
                 >
 
                   <div className="absolute inset-7 rounded-[22px] border border-white/20 bg-black/10 p-5 backdrop-blur-sm">
@@ -702,89 +697,142 @@ export default function Home() {
           </div>
 
 
-          <div className="relative mx-auto mt-16 h-[400px] max-w-4xl">
+          <div className="relative mx-auto mt-16 h-[620px] max-w-4xl">
 
             {/* CURVED ECOSYSTEM CONNECTORS */}
             <svg
               className="pointer-events-none absolute inset-0 z-0 hidden h-full w-full md:block"
-              viewBox="0 0 800 400"
+              viewBox="0 0 800 560"
               fill="none"
               preserveAspectRatio="none"
             >
-              {/* Web → Vayu */}
+              {/* Web & App → Vayu */}
               <path
-                d="M155 70 C245 70 300 125 336 175"
-                stroke="#9BC8D8"
+                d="M160 70 C245 70 300 145 335 220"
+                stroke="#B8D4E8"
                 strokeWidth="2"
                 strokeLinecap="round"
-                opacity="0.55"
               />
-
               <path
-                d="M155 70 C245 70 300 125 336 175"
+                d="M335 220 C300 145 245 70 160 70"
                 stroke="#28D8B0"
                 strokeWidth="3"
-                strokeLinecap="round"
-                strokeDasharray="1000"
-                className="ecosystem-flow ecosystem-flow-reverse"
-                opacity="0.9"
+                strokeLinecap="butt"
+                pathLength="1"
+                strokeDasharray="0.03 0.97"
+                className="ecosystem-flow"
               />
 
-              {/* Design → Vayu */}
+              {/* SEO → Vayu */}
               <path
-                d="M155 330 C245 330 300 275 336 225"
-                stroke="#9BC8D8"
+                d="M160 225 C250 225 295 245 335 260"
+                stroke="#B8D4E8"
                 strokeWidth="2"
                 strokeLinecap="round"
-                opacity="0.55"
               />
-
               <path
-                d="M155 330 C245 330 300 275 336 225"
+                d="M335 260 C295 245 250 225 160 225"
                 stroke="#005098"
                 strokeWidth="3"
-                strokeLinecap="round"
-                strokeDasharray="1000"
-                className="ecosystem-flow ecosystem-flow-reverse"
-                opacity="0.9"
+                strokeLinecap="butt"
+                pathLength="1"
+                className="ecosystem-flow"
               />
 
-              {/* Vayu → Apps */}
+              {/* Social Media → Vayu */}
               <path
-                d="M464 175 C500 125 555 70 645 70"
-                stroke="#9BC8D8"
+                d="M160 380 C245 380 295 320 335 300"
+                stroke="#B8D4E8"
                 strokeWidth="2"
                 strokeLinecap="round"
-                opacity="0.55"
               />
-
               <path
-                d="M464 175 C500 125 555 70 645 70"
+                d="M335 300 C295 320 245 380 160 380"
                 stroke="#28D8B0"
                 strokeWidth="3"
-                strokeLinecap="round"
-                strokeDasharray="1000"
+                strokeLinecap="butt"
+                pathLength="1"
                 className="ecosystem-flow"
-                opacity="0.9"
               />
 
-              {/* Vayu → Growth */}
+              {/* Meta & Google Ads → Vayu */}
               <path
-                d="M464 225 C500 275 555 330 645 330"
-                stroke="#9BC8D8"
+                d="M160 490 C245 490 300 360 335 335"
+                stroke="#B8D4E8"
                 strokeWidth="2"
                 strokeLinecap="round"
-                opacity="0.55"
               />
-
               <path
-                d="M464 225 C500 275 555 330 645 330"
+                d="M335 335 C300 360 245 490 160 490"
                 stroke="#005098"
                 strokeWidth="3"
-                strokeLinecap="round"
-                strokeDasharray="1000"
+                strokeLinecap="butt"
+                pathLength="1"
                 className="ecosystem-flow"
-                opacity="0.9"
+              />
+
+              {/* Vayu → Brand Promotion */}
+              <path
+                d="M465 220 C500 145 555 70 640 70"
+                stroke="#B8D4E8"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <path
+                d="M465 220 C500 145 555 70 640 70"
+                stroke="#28D8B0"
+                strokeWidth="3"
+                strokeLinecap="butt"
+                pathLength="1"
+                className="ecosystem-flow"
+              />
+
+              {/* Vayu → CRM */}
+              <path
+                d="M465 260 C505 245 550 225 640 225"
+                stroke="#B8D4E8"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <path
+                d="M465 260 C505 245 550 225 640 225"
+                stroke="#005098"
+                strokeWidth="3"
+                strokeLinecap="butt"
+                pathLength="1"
+                className="ecosystem-flow"
+              />
+
+              {/* Vayu → Influencer */}
+              <path
+                d="M465 300 C505 320 555 380 640 380"
+                stroke="#B8D4E8"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <path
+                d="M465 300 C505 320 555 380 640 380"
+                stroke="#28D8B0"
+                strokeWidth="3"
+                strokeLinecap="butt"
+                pathLength="1"
+                className="ecosystem-flow"
+              />
+
+              {/* Vayu → Content & Video */}
+              <path
+                d="M465 335 C500 360 555 490 640 490"
+                stroke="#B8D4E8"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <path
+                d="M465 335 C500 360 555 490 640 490"
+                stroke="#005098"
+                strokeWidth="3"
+                strokeLinecap="butt"
+                pathLength="1"
+                className="ecosystem-flow"
               />
             </svg>
 
@@ -805,14 +853,19 @@ export default function Home() {
 
 
             {[
-                ['Web', 'Websites & platforms', 'left-0 top-0', Code2],
-                ['Design', 'UI/UX & branding', 'left-0 bottom-0', Palette],
-                ['Apps', 'Mobile experiences', 'right-0 top-0', Smartphone],
-                ['Growth', 'Marketing & social', 'right-0 bottom-0', TrendingUp],
-              ].map(([title, text, position, Icon]) => (
+              ['Web & App', 'Websites and mobile applications', 'left-0 top-0', Code2],
+              ['SEO', 'Search visibility and growth', 'left-0 top-[160px]', Search],
+              ['Social Media', 'Social media management', 'left-0 top-[320px]', Megaphone],
+              ['Meta & Google Ads', 'Targeted paid campaigns', 'left-0 top-[480px]', Target],
+
+              ['Brand Promotion', 'Build a stronger brand presence', 'right-0 top-0', TrendingUp],
+              ['CRM', 'Customer and workflow management', 'right-0 top-[160px]', Database],
+              ['Influencer', 'Creator-led brand campaigns', 'right-0 top-[320px]', Users],
+              ['Content & Video', 'Writing and visual production', 'right-0 top-[480px]', Video],
+            ].map(([title, text, position, Icon]) => (
               <div
                 key={title}
-                className={`group absolute ${position} w-40 overflow-hidden rounded-[22px] border border-[#D8E6EF] bg-white/90 p-3.5 text-center shadow-[0_12px_35px_rgba(7,59,107,0.07)] backdrop-blur-xl transition-all duration-300 ease-out hover:scale-[1.04] hover:border-[#28D8B0]/60 hover:shadow-[0_20px_55px_rgba(0,80,152,0.16)]`}
+                className={`group ecosystem-card absolute ${position} w-40 ... overflow-hidden rounded-[22px] border border-[#D8E6EF] bg-white/90 p-3.5 text-center shadow-[0_12px_35px_rgba(7,59,107,0.07)] backdrop-blur-xl transition-all duration-300 ease-out hover:scale-[1.04] hover:border-[#28D8B0]/60 hover:shadow-[0_20px_55px_rgba(0,80,152,0.16)]`}
               >
                 <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#28D8B0]/10 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
 
