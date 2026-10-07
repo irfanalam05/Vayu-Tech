@@ -73,25 +73,29 @@ const services = [
 
 const work = [
   {
-    name: 'Cozy & Cuddles',
-    type: 'E-commerce Experience',
-    description:
-      'A modern baby-products shopping experience focused on discovery, trust and simple navigation.',
-    gradient: 'from-[#0A4775] via-[#087A82] to-[#28D8B0]',
+    name: 'EZ Tuitions',
+    type: 'Web Development',
+    description:'A modern tutoring platform designed to connect students with verified home and online tutors, making it easier to discover the right learning support and get started with confidence.',
+    image: '/Website img/EZ-Tuitions.png',
+    link: 'https://www.eztuitions.com/',
   },
+
   {
-    name: 'Business Dashboard',
-    type: 'Web Application',
+    name: 'Chand Digital Services',
+    type: 'Web Development',
     description:
-      'A focused dashboard experience designed to make complex business information easier to understand.',
-    gradient: 'from-[#073B6B] via-[#005098] to-[#2D8ED1]',
+      'A digital services platform offering a wide range of legal, compliance, documentation, and business support services through a simple and accessible online experience.',
+    image: '/Website img/Chand-Digital-Services.png',
+    link: 'https://www.chanddigitalservice.com/',
   },
+
   {
-    name: 'Mobile Experience',
-    type: 'App Concept',
+    name: 'GRT Jewellers',
+    type: 'Mobile App',
     description:
-      'A clean mobile product experience designed around usability, speed and simple interactions.',
-    gradient: 'from-[#06456D] via-[#087E92] to-[#28D8B0]',
+      'A premium jewellery shopping app offering curated collections, product discovery, offers, wishlist, cart, delivery options, and a seamless online shopping experience.',
+    image: '/App img/GRT-Jewellers.png',
+    link: 'https://play.google.com/store/apps/details?id=com.grtjewels.oriana',
   },
 ]
 
@@ -597,66 +601,33 @@ export default function Home() {
                 className="group grid overflow-hidden rounded-[28px] border border-white/10 bg-white/[.035] lg:grid-cols-[1.1fr_.9fr]"
               >
 
-                <div
-                  className={`relative min-h-[280px] overflow-hidden bg-gradient-to-br ${project.gradient}`}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block min-h-[280px] overflow-hidden bg-white"
                 >
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
 
-                  <div className="absolute inset-7 rounded-[22px] border border-white/20 bg-black/10 p-5 backdrop-blur-sm">
-
-                    <div className="flex items-center gap-2 border-b border-white/20 pb-4">
-                      <span className="h-2 w-2 rounded-full bg-white/60" />
-                      <span className="h-2 w-2 rounded-full bg-white/40" />
-                      <span className="h-2 w-2 rounded-full bg-white/30" />
-                    </div>
-
-                    <div className="mt-8 grid grid-cols-[.6fr_1.4fr] gap-4">
-
-                      <div className="space-y-3">
-                        <div className="h-10 rounded-xl bg-white/15" />
-                        <div className="h-10 rounded-xl bg-white/10" />
-                        <div className="h-10 rounded-xl bg-white/10" />
-                      </div>
-
-                      <div className="rounded-2xl bg-white/15 p-4">
-                        <div className="h-4 w-24 rounded bg-white/30" />
-                        <div className="mt-5 h-20 rounded-xl bg-white/15" />
-                        <div className="mt-3 grid grid-cols-2 gap-3">
-                          <div className="h-12 rounded-xl bg-white/10" />
-                          <div className="h-12 rounded-xl bg-white/10" />
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div className="absolute bottom-6 right-7 rounded-full border border-white/20 bg-black/20 px-3 py-1 text-[10px] font-semibold backdrop-blur">
+                  <div className="absolute bottom-6 right-7 rounded-full border border-white/30 bg-[#071B30]/80 px-3 py-1 text-[10px] font-semibold text-white backdrop-blur">
                     {project.type}
                   </div>
+                </a>
 
-                </div>
 
+                <div className="flex flex-col items-center justify-center p-8 text-center sm:p-12">
 
-                <div className="flex flex-col justify-center p-8 sm:p-12">
-
-                  <span className="text-xs font-bold uppercase tracking-[.18em] text-[#28D8B0]">
-                    0{index + 1}
-                  </span>
-
-                  <h3 className="mt-5 text-3xl font-bold sm:text-4xl">
+                  <h3 className="text-3xl font-bold sm:text-4xl">
                     {project.name}
                   </h3>
 
-                  <p className="mt-5 max-w-md leading-7 text-slate-400">
+                  <p className="mt-4 max-w-md leading-7 text-slate-400">
                     {project.description}
                   </p>
-
-                  <Link
-                    href="/work"
-                    className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-white"
-                  >
-                    View project
-                    <ArrowRight className="h-4 w-4 text-[#28D8B0]" />
-                  </Link>
 
                 </div>
 
