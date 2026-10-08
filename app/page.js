@@ -123,10 +123,11 @@ export default function Home() {
 
             {/* Close */}
             <button
+              type="button"
               onClick={() => setShowPopup(false)}
-              className="absolute right-5 top-5 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-[#E2E8F0] bg-white text-[#64748B] transition hover:bg-[#F8FAFC] hover:text-[#073B6B]"
+              className="pointer-events-auto absolute right-5 top-5 z-[9999] flex h-9 w-9 items-center justify-center rounded-full border border-[#E2E8F0] bg-white text-[#64748B] transition hover:bg-[#F8FAFC] hover:text-[#073B6B]"
               aria-label="Close popup"
-            >
+              >
               <X size={17} />
             </button>
 

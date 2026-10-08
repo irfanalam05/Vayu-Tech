@@ -219,13 +219,13 @@ export default function About() {
             {approach.map((item, index) => (
               <div
                 key={item.title}
-                className="rounded-[26px] border border-[#B8D4E8] bg-white p-7 shadow-[0_15px_40px_rgba(0,80,152,0.04)]"
+                className="group rounded-[26px] border border-[#B8D4E8] bg-white p-7 shadow-[0_15px_40px_rgba(0,80,152,0.04)] transition-all duration-300 hover:-translate-y-2 hover:border-[#28D8B0] hover:shadow-[0_20px_50px_rgba(40,216,176,0.14)]"
               >
-                <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-full bg-[#005098] text-sm font-bold text-white">
+                <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-full bg-[#005098] text-sm font-bold text-white transition-all duration-300 group-hover:bg-[#28D8B0] group-hover:text-[#071B30]">
                   {String(index + 1).padStart(2, '0')}
                 </div>
 
-                <h3 className="text-lg font-extrabold">
+                <h3 className="text-lg font-extrabold transition-colors duration-300 group-hover:text-[#005098]">
                   {item.title}
                 </h3>
 

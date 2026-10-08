@@ -10,6 +10,8 @@ import {
   MessageCircle,
   Clock3,
   Sparkles,
+  Instagram,
+  Linkedin,
 } from 'lucide-react'
 import Link from 'next/link'
 
@@ -294,20 +296,99 @@ ${formData.message}`
 
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              {/* WhatsApp */}
-              <a
-                href="https://wa.me/917303123047"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex h-20 w-20 items-center justify-center rounded-2xl border border-[#B8D4E8] bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-              >
-                <img
-                  src="/WhatsApp_logo.png"
-                  alt="WhatsApp"
-                  className="h-12 w-12 object-contain"
-                />
-              </a>
+      {/* Social Media */}
+      <section className="px-5 pb-24">
+        <div className="mx-auto max-w-[1000px]">
+
+          <div className="relative overflow-hidden rounded-[32px] bg-[#071B30] px-7 py-10 shadow-[0_20px_60px_rgba(7,59,107,0.12)] sm:px-10 sm:py-12">
+
+            {/* Background glow */}
+            <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#28D8B0]/10 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-[#005098]/30 blur-3xl" />
+
+            <div className="relative">
+
+              {/* Heading */}
+              <div className="mb-8 text-center">
+                <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#8FF5DF]">
+                  Stay Connected
+                </p>
+
+                <h2 className="text-3xl font-extrabold tracking-[-0.03em] text-white sm:text-4xl">
+                  Connect With Us
+                </h2>
+
+                <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-white/60">
+                  Follow Vayu Tech and stay updated with our latest work, ideas and updates.
+                </p>
+              </div>
+
+              {/* Social Cards */}
+              <div className="grid gap-4 sm:grid-cols-2">
+
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/vayutechstudio?stkn=aTBwdmd0eDRrZHZn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-5 rounded-[24px] border border-white/10 bg-white/[0.06] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#28D8B0]/50 hover:bg-[#28D8B0]/10"
+                >
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#28D8B0]/10 text-[#28D8B0] transition-all duration-300 group-hover:bg-[#28D8B0] group-hover:text-[#071B30]">
+                    <Instagram className="h-6 w-6" />
+                  </div>
+
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-white/40">
+                      Instagram
+                    </p>
+
+                    <p className="mt-1 text-base font-bold text-white">
+                      Vayu Tech
+                    </p>
+
+                    <p className="mt-1 text-xs text-white/50">
+                      Follow our latest updates
+                    </p>
+                  </div>
+
+                  <ArrowRight className="ml-auto h-5 w-5 shrink-0 text-white/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#28D8B0]" />
+                </a>
+
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/company/vayu-techh/home/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-5 rounded-[24px] border border-white/10 bg-white/[0.06] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#28D8B0]/50 hover:bg-[#28D8B0]/10"
+                >
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#28D8B0]/10 text-[#28D8B0] transition-all duration-300 group-hover:bg-[#28D8B0] group-hover:text-[#071B30]">
+                    <Linkedin className="h-6 w-6" />
+                  </div>
+
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-white/40">
+                      LinkedIn
+                    </p>
+
+                    <p className="mt-1 text-base font-bold text-white">
+                      Vayu Tech
+                    </p>
+
+                    <p className="mt-1 text-xs text-white/50">
+                      Connect with our company
+                    </p>
+                  </div>
+
+                  <ArrowRight className="ml-auto h-5 w-5 shrink-0 text-white/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#28D8B0]" />
+                </a>
+
+              </div>
+
             </div>
           </div>
         </div>
@@ -391,7 +472,7 @@ ${formData.message}`
           </div>
         </div>
       </section>
-
+ 
     </main>
   )
 }
