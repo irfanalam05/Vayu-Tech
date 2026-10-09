@@ -279,9 +279,14 @@ ${formData.message}`
                         +91 73031 23047
                       </p>
                     </div>
-                  </a>
-
-                  <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                  </a>             
+                
+                  <a
+                    href="https://maps.app.goo.gl/WfPSFbu4Ctif2VWG9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#28D8B0]/40 hover:bg-[#28D8B0]/10"
+                  >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#28D8B0]/10 text-[#28D8B0]">
                       <MapPin className="h-5 w-5" />
                     </div>
@@ -292,7 +297,7 @@ ${formData.message}`
                         New Delhi, India
                       </p>
                     </div>
-                  </div>
+                  </a>
 
                 </div>
               </div>

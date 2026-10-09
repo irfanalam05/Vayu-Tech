@@ -21,6 +21,18 @@ export default function Footer() {
             >
               vayutech29@gmail.com
             </a>
+
+            <div className="mt-4 max-w-sm text-sm leading-6 text-slate-300">
+              <p className="mb-1 font-semibold text-white">Office Address</p>
+              <a
+                href="https://maps.app.goo.gl/WfPSFbu4Ctif2VWG9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-300 hover:text-[#28D8B0]"
+              >
+                Upper Ground Floor, F-52, Vishwakarma Colony, New Delhi – 110044
+              </a>
+            </div>
           </div>
 
           {/* Navigation */}
@@ -57,20 +69,54 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+                    {/* Social Media */}
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-white">
-              Services
+              Social Media
             </h4>
-            <ul className="space-y-2 text-sm text-slate-300">
-              <li>Web & App Development</li>
-              <li>SEO / Rank Higher</li>
-              <li>SMO / Social Media Management</li>
-              <li>Meta & Google Ads</li>
-              <li>Brand Promotion</li>
-              <li>CRM Development</li>
-              <li>Influencer Marketing</li>
-              <li>Content Writing & Video Production</li>
+
+            <ul className="space-y-3 text-sm text-slate-300">
+              <li>
+                <a
+                  href="https://www.instagram.com/vayutechstudio?stkn=aTBwdmd0eDRrZHZn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors duration-300 hover:text-[#28D8B0]"
+                >
+                  Instagram
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/vayu-techh/home/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors duration-300 hover:text-[#28D8B0]"
+                >
+                  LinkedIn
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="mailto:vayutech29@gmail.com"
+                  className="transition-colors duration-300 hover:text-[#28D8B0]"
+                >
+                  Email Us
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://wa.me/917303123047"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors duration-300 hover:text-[#28D8B0]"
+                >
+                  WhatsApp
+                </a>
+              </li>
             </ul>
           </div>
         </div>

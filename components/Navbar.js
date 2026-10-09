@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import { Menu, X, ArrowUpRight } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -66,40 +66,26 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Link
-              href="/contact"
+            <a
+              href="https://wa.me/917303123047"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-[#005098] px-5 py-2.5 text-[13px] font-bold text-white shadow-md shadow-[#005098]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#073B6B]"
             >
-              Let&apos;s Talk
-              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
+              Get a Quote
+              <img
+                src="/WhatsApp_logo.png"
+                alt="WhatsApp"
+                className="h-5 w-5 object-contain"
+              />
+            </a>
           </div>
-
-
-          {/* MOBILE BUTTON */}
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#E2E8F0] bg-white text-[#0B172A] transition hover:border-[#005098]/30 hover:text-[#005098] md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={mobileMenuOpen}
-          >
-            {mobileMenuOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </button>
-
-        </div>
-
+          </div>
 
         {/* MOBILE MENU */}
         {mobileMenuOpen && (
           <div className="border-t border-[#E2E8F0] px-4 pb-4 pt-3 md:hidden">
-
             <div className="flex flex-col gap-1">
-
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -111,17 +97,19 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              <Link
-                href="/contact"
+              <a
+                href="tel:+917303123047"
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-[#005098] px-4 py-3 text-sm font-bold text-white"
               >
-                Let&apos;s Talk
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-
+                Let's Talk
+                <img
+                  src="/Call_logo.png"
+                  alt="Call"
+                  className="h-5 w-5 object-contain"
+                />
+              </a>
             </div>
-
           </div>
         )}
 
