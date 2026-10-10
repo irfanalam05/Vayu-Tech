@@ -103,6 +103,26 @@ export default function About() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
+            {/* Founder Stats */}
+            <div className="mt-8 grid max-w-[420px] grid-cols-2 gap-4">
+              <div className="rounded-2xl border border-[#DCEAF2] bg-white p-5 sm:p-6">
+                <p className="text-3xl font-semibold tracking-tight text-[#071B30] sm:text-4xl">
+                  May ’25
+                </p>
+                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#64748B]">
+                  Founded
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[#DCEAF2] bg-white p-5 sm:p-6">
+                <p className="text-3xl font-semibold tracking-tight text-[#071B30] sm:text-4xl">
+                  10+
+                </p>
+                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#64748B]">
+                  Team Members
+                </p>
+              </div>
+            </div>
 
             <div className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs font-medium text-[#64748B] lg:justify-start">
               <span className="flex items-center gap-2">

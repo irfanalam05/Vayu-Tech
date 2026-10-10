@@ -1,11 +1,35 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const [scrollProgress, setScrollProgress] = useState(0)
+  useEffect(() => {
+    const updateScrollProgress = () => {
+      const scrollableHeight =
+        document.documentElement.scrollHeight - window.innerHeight
+
+      const progress =
+        scrollableHeight > 0
+          ? Math.min(100, Math.max(0, (window.scrollY / scrollableHeight) * 100))
+          : 0
+
+      setScrollProgress(progress)
+    }
+
+    updateScrollProgress()
+    window.addEventListener('scroll', updateScrollProgress, { passive: true })
+    window.addEventListener('resize', updateScrollProgress)
+
+    return () => {
+      window.removeEventListener('scroll', updateScrollProgress)
+      window.removeEventListener('resize', updateScrollProgress)
+    }
+  }, [])
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -17,7 +41,33 @@ export default function Navbar() {
 
   return (
     <header className="fixed left-0 right-0 top-4 z-[100] px-4 sm:px-6">
-      <nav className="relative mx-auto w-full max-w-[1180px] rounded-2xl border border-white/60 bg-white/55 shadow-[0_8px_40px_rgba(15,23,42,.08)] backdrop-blur-2xl backdrop-saturate-150">
+      <nav
+        className="relative mx-auto w-full max-w-[1180px] rounded-2xl border border-white/60 bg-white/55 shadow-[0_8px_40px_rgba(15,23,42,.08)] backdrop-blur-2xl backdrop-saturate-150"
+        style={{
+          '--scroll-progress': `${scrollProgress}%`,
+        }}
+      >
+        <div
+          className="pointer-events-none absolute inset-0 rounded-2xl"
+          style={{
+            padding: '2.5px',
+            background: `conic-gradient(
+              from 270deg,
+              #005098 0%,
+              #005098 ${scrollProgress * 0.35}%,
+              #28D8B0 ${scrollProgress * 0.7}%,
+              #005098 ${scrollProgress}%,
+              transparent ${scrollProgress}%,
+              transparent 100%
+            )`,
+            opacity: 1,
+            transition: 'opacity 200ms ease',
+            WebkitMask:
+              'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+            WebkitMaskComposite: 'xor',
+            maskComposite: 'exclude',
+          }}
+        />
 
         <div className="flex h-[68px] items-center justify-between px-4 sm:px-6">
 
