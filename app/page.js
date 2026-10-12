@@ -104,7 +104,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 1200);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -112,7 +112,7 @@ export default function Home() {
     <main className="overflow-hidden bg-[#F8FAFC] text-[#0B172A]">
       {/* =========================================================
             ENTRY POPUP / PROJECT CTA
-            Opens automatically after 1.2 seconds
+            Opens automatically after 3 seconds
         ========================================================= */}
       {showPopup && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#073B6B]/35 px-4 backdrop-blur-md">

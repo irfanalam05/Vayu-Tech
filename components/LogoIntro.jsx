@@ -6,14 +6,14 @@ export default function LogoIntro() {
   const [showIntro, setShowIntro] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowIntro(false), 8000)
+    const timer = setTimeout(() => setShowIntro(false), 5000)
     return () => clearTimeout(timer)
   }, [])
 
   if (!showIntro) return null
 
   return (
-    <div className="fixed inset-0 z-[99999] flex flex-col items-center justify-center overflow-hidden bg-[#071B30]">
+    <div className="fixed inset-0 z-[99999] flex flex-col items-center justify-center overflow-hidden bg-white">
 
       {/* Complete Logo + Left-to-Right Shine */}
       <div className="logo-reveal relative h-48 w-[340px] sm:h-60 sm:w-[440px]">
@@ -28,7 +28,7 @@ export default function LogoIntro() {
 
       {/* Brand Name */}
       <div className="brand-name mt-6 text-center">
-        <h1 className="text-3xl font-extrabold tracking-[0.18em] text-white sm:text-5xl">
+        <h1 className="text-3xl font-extrabold tracking-[0.18em] text-[#073B6B] sm:text-5xl">
           VAYU TECH
         </h1>
 
@@ -41,7 +41,7 @@ export default function LogoIntro() {
         .logo-reveal {
           opacity: 0;
           transform: scale(0.92);
-          animation: logoAppear 0.7s ease-out 0.2s forwards;
+          animation: logoAppear 0.5s ease-out 0.1s forwards;
         }
 
         .logo-shine {
@@ -66,7 +66,7 @@ export default function LogoIntro() {
           -webkit-mask-size: contain;
           mask-size: contain;
           opacity: 0;
-          animation: shineSweep 1.5s ease-in-out 0.9s forwards;
+          animation: shineSweep 1.1s ease-in-out 0.5s forwards;
         }
 
         .brand-name {

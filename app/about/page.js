@@ -72,11 +72,12 @@ export default function About() {
     <main className="overflow-hidden bg-[#F8FAFC] text-[#071B30]">
       
       {/* HERO */}
-      <section className="relative px-5 pb-12 pt-32 sm:pt-36 lg:pb-16 lg:pt-40">
+      <section className="relative overflow-hidden bg-[#F8FAFC] px-5 pb-12 pt-32 sm:pt-36 lg:pb-16 lg:pt-40">
         <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#28D8B0]/10 blur-[100px]" />
 
-        <div className="mx-auto grid max-w-[1200px] items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-12">
-          {/* Hero Content */}
+        <div className="mx-auto grid max-w-[1200px] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
+
+          {/* About Vayu Tech */}
           <div className="relative z-10 text-center lg:text-left">
             <span className="inline-flex rounded-full border border-[#B8D4E8] bg-white px-4 py-2 text-[10px] font-bold uppercase tracking-[0.17em] text-[#005098]">
               About Vayu Tech
@@ -89,9 +90,12 @@ export default function About() {
               </span>
             </h1>
 
-            <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-[#64748B] sm:text-base sm:leading-7 lg:mx-0">
-              We help businesses build, grow, and strengthen their digital
-              presence through technology, design, and digital marketing.
+            <p className="mt-5 text-sm leading-6 text-[#64748B] sm:text-base sm:leading-7">
+              Welcome to Vayu Tech, your trusted digital transformation partner
+              dedicated to turning bold ideas into scalable, high-performance
+              digital products. We build web applications, mobile apps,
+              multi-vendor marketplaces, and customized software solutions
+              tailored to modern business needs.
             </p>
 
             <div className="mt-7 flex justify-center lg:justify-start">
@@ -103,28 +107,29 @@ export default function About() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-            {/* Founder Stats */}
-            <div className="mt-8 grid max-w-[420px] grid-cols-2 gap-4">
-              <div className="rounded-2xl border border-[#DCEAF2] bg-white p-5 sm:p-6">
-                <p className="text-3xl font-semibold tracking-tight text-[#071B30] sm:text-4xl">
+
+            {/* Company Highlights */}
+            <div className="mt-8 grid grid-cols-2 gap-3">
+              <div className="rounded-2xl border border-[#DCEAF2] bg-white p-4 sm:p-5">
+                <p className="text-2xl font-bold text-[#071B30] sm:text-3xl">
                   May ’25
                 </p>
-                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#64748B]">
+                <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#64748B]">
                   Founded
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#DCEAF2] bg-white p-5 sm:p-6">
-                <p className="text-3xl font-semibold tracking-tight text-[#071B30] sm:text-4xl">
+              <div className="rounded-2xl border border-[#DCEAF2] bg-white p-4 sm:p-5">
+                <p className="text-2xl font-bold text-[#071B30] sm:text-3xl">
                   10+
                 </p>
-                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#64748B]">
+                <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#64748B]">
                   Team Members
                 </p>
               </div>
             </div>
 
-            <div className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs font-medium text-[#64748B] lg:justify-start">
+            <div className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-3 text-xs font-medium text-[#64748B] lg:justify-start">
               <span className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-[#005098]" />
                 Quality-focused delivery
@@ -136,46 +141,45 @@ export default function About() {
             </div>
           </div>
 
-          {/* Founder Profile */}
-          <div className="mx-auto w-full max-w-[470px]">
-            <div className="relative overflow-hidden rounded-[30px] border border-[#B8D4E8] bg-white p-3 shadow-[0_25px_70px_rgba(0,80,152,0.12)] sm:p-4">
-              <div className="relative overflow-hidden rounded-[22px] bg-[#EAF4F8]">
-                <div className="group overflow-hidden rounded-2xl">
-                  <img
-                    src="/harshita-founder.jpeg"
-                    alt="Ms. Harshita, Founder and CEO of Vayu Tech"
-                    className="h-[340px] w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105 sm:h-[410px]"
-                  />
-                </div>
+          {/* Office Image + Small Founder Card */}
+          <div className="relative mx-auto w-full max-w-[650px]">
+            <div className="group relative h-[320px] overflow-hidden rounded-[28px] border border-[#DCEAF2] bg-white shadow-[0_25px_70px_rgba(0,80,152,0.13)] sm:h-[430px] lg:h-[520px]">
+              <img
+                src="/vayu-office.png"
+                alt="Vayu Tech modern office and workspace"
+                className="h-full w-full object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+              />
 
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071B30]/90 via-[#071B30]/30 to-transparent px-5 pb-5 pt-20">
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#8FF5DF]">
-                    Founder &amp; CEO
-                  </p>
-                  <h2 className="mt-1 text-2xl font-extrabold text-white">
-                    Ms. Harshita
-                  </h2>
-                  <p className="mt-1 text-sm text-white/80">
-                    Vayu Tech
-                  </p>
-                </div>
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071B30]/20 via-transparent to-transparent" />
+            </div>
+
+            {/* Compact Founder Profile */}
+            <div className="absolute bottom-4 right-4 z-10 flex w-[245px] items-center gap-3 rounded-2xl border border-[#DCEAF2] bg-white p-3 shadow-[0_15px_45px_rgba(7,59,107,0.18)] sm:bottom-5 sm:right-5 sm:w-[290px] sm:p-4">
+              <div className="h-[82px] w-[72px] shrink-0 overflow-hidden rounded-xl bg-[#EAF4F8] sm:h-[96px] sm:w-[82px]">
+                <img
+                  src="/harshita-founder.jpeg"
+                  alt="Ms. Harshita, Founder and CEO of Vayu Tech"
+                  className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                />
               </div>
 
-              <div className="flex items-center gap-3 px-2 py-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EAF6FC] text-[#005098]">
-                  <ShieldCheck className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-[#071B30]">
-                    Leadership &amp; Innovation
-                  </p>
-                  <p className="mt-1 text-xs text-[#64748B]">
-                    Building meaningful digital experiences.
-                  </p>
+              <div className="min-w-0">
+                <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#20A98E]">
+                  Founder &amp; CEO
+                </p>
+                <h2 className="mt-1 text-base font-extrabold text-[#071B30] sm:text-lg">
+                  Ms. Harshita
+                </h2>
+                <p className="mt-1 text-xs text-[#64748B]">Vayu Tech</p>
+
+                <div className="mt-2 flex items-center gap-1.5 text-[10px] font-medium text-[#005098]">
+                  <ShieldCheck className="h-3.5 w-3.5 shrink-0" />
+                  Leadership &amp; Innovation
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
