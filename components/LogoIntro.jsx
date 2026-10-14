@@ -6,7 +6,7 @@ export default function LogoIntro() {
   const [showIntro, setShowIntro] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowIntro(false), 5000)
+    const timer = setTimeout(() => setShowIntro(false), 2500)
     return () => clearTimeout(timer)
   }, [])
 
@@ -26,7 +26,7 @@ export default function LogoIntro() {
         <div className="logo-shine" />
       </div>
 
-      {/* Brand Name */}
+      {/* Brand Name
       <div className="brand-name mt-6 text-center">
         <h1 className="text-3xl font-extrabold tracking-[0.18em] text-[#073B6B] sm:text-5xl">
           VAYU TECH
@@ -35,13 +35,13 @@ export default function LogoIntro() {
         <p className="tagline mt-3 text-xs font-semibold tracking-[0.4em] text-[#28D8B0] sm:text-sm">
           DIGITAL SOLUTIONS
         </p>
-      </div>
+      </div> */}
 
       <style jsx>{`
         .logo-reveal {
           opacity: 0;
           transform: scale(0.92);
-          animation: logoAppear 0.5s ease-out 0.1s forwards;
+          animation: logoAppear 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         .logo-shine {
@@ -81,7 +81,17 @@ export default function LogoIntro() {
         }
 
         @keyframes logoAppear {
-          to {
+          0% {
+            opacity: 0;
+            transform: scale(0.35);
+          }
+
+          70% {
+            opacity: 1;
+            transform: scale(1.12);
+          }
+
+          100% {
             opacity: 1;
             transform: scale(1);
           }
