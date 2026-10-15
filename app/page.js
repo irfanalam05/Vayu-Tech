@@ -1,4 +1,5 @@
 'use client';
+import Testimonials from '@/components/Testimonials'
 import { useEffect, useState } from 'react';
 import Link from 'next/link'
 import {
@@ -640,6 +641,8 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CLIENT TESTIMONIALS */}
+      <Testimonials />
 
       {/* =====================================================
           VAYU ECOSYSTEM
