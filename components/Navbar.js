@@ -82,6 +82,7 @@ export default function Navbar() {
                 src="/logo-vayu.png"
                 alt="Vayu Tech"
                 fill
+                sizes="40px"
                 className="object-contain"
                 priority
               />

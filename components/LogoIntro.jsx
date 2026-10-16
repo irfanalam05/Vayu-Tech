@@ -16,7 +16,7 @@ export default function LogoIntro() {
     <div className="fixed inset-0 z-[99999] flex flex-col items-center justify-center overflow-hidden bg-white">
 
       {/* Complete Logo + Left-to-Right Shine */}
-      <div className="logo-reveal relative h-48 w-[340px] sm:h-60 sm:w-[440px]">
+      <div className="logo-reveal relative h-[420px] w-[100vw] max-w-[800px] sm:h-[560px] sm:w-[900px]">
         <img
           src="/logo-vayu.png"
           alt="Vayu Tech Logo"
@@ -83,12 +83,12 @@ export default function LogoIntro() {
         @keyframes logoAppear {
           0% {
             opacity: 0;
-            transform: scale(0.35);
+            transform: scale(0.2);
           }
 
           70% {
             opacity: 1;
-            transform: scale(1.12);
+            transform: scale(1.2);
           }
 
           100% {
