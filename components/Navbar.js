@@ -1,4 +1,5 @@
 'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
@@ -6,8 +7,8 @@ import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   const [scrollProgress, setScrollProgress] = useState(0)
+
   useEffect(() => {
     const updateScrollProgress = () => {
       const scrollableHeight =
@@ -15,7 +16,10 @@ export default function Navbar() {
 
       const progress =
         scrollableHeight > 0
-          ? Math.min(100, Math.max(0, (window.scrollY / scrollableHeight) * 100))
+          ? Math.min(
+              100,
+              Math.max(0, (window.scrollY / scrollableHeight) * 100)
+            )
           : 0
 
       setScrollProgress(progress)
@@ -43,10 +47,9 @@ export default function Navbar() {
     <header className="fixed left-0 right-0 top-4 z-[100] px-4 sm:px-6">
       <nav
         className="relative mx-auto w-full max-w-[1180px] rounded-2xl border border-white/60 bg-white/55 shadow-[0_8px_40px_rgba(15,23,42,.08)] backdrop-blur-2xl backdrop-saturate-150"
-        style={{
-          '--scroll-progress': `${scrollProgress}%`,
-        }}
+        style={{ '--scroll-progress': `${scrollProgress}%` }}
       >
+        {/* SCROLL PROGRESS BORDER */}
         <div
           className="pointer-events-none absolute inset-0 rounded-2xl"
           style={{
@@ -69,39 +72,37 @@ export default function Navbar() {
           }}
         />
 
-        <div className="flex h-[68px] items-center justify-between px-4 sm:px-6">
-
+        {/* MAIN HEADER ROW */}
+        <div className="relative flex h-[68px] items-center justify-between px-4 sm:px-6">
           {/* BRAND */}
           <Link
             href="/"
-            className="group flex items-center gap-3"
+            className="group flex min-w-0 items-center gap-2 sm:gap-3"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <div className="relative h-10 w-10">
+            <div className="relative h-10 w-10 shrink-0 md:h-10 md:w-10">
               <Image
                 src="/logo-vayu.png"
                 alt="Vayu Tech"
                 fill
-                sizes="40px"
+                sizes="(min-width: 768px) 40px, 40px"
                 className="object-contain"
                 priority
               />
             </div>
 
             <div className="leading-none">
-              <span className="block text-[15px] font-bold tracking-[-0.02em] text-[#0B172A]">
+              <span className="block whitespace-nowrap text-[15px] font-bold tracking-[-0.02em] text-[#0B172A]">
                 Vayu Tech
               </span>
-              <span className="mt-1 block text-[8px] font-semibold uppercase tracking-[0.16em] text-[#64748B]">
+              <span className="mt-1 block whitespace-nowrap text-[8px] font-semibold uppercase tracking-[0.16em] text-[#64748B]">
                 Digital Solutions
               </span>
             </div>
           </Link>
 
-
-          {/* DESKTOP NAV */}
+          {/* DESKTOP NAVIGATION */}
           <div className="hidden items-center gap-1 md:flex">
-
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -111,11 +112,9 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-
           </div>
 
-
-          {/* CTA */}
+          {/* DESKTOP CTA */}
           <div className="hidden md:block">
             <a
               href="https://wa.me/917303123047"
@@ -131,11 +130,22 @@ export default function Navbar() {
               />
             </a>
           </div>
-          </div>
 
-        {/* MOBILE MENU */}
+          {/* MOBILE MENU TOGGLE */}
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-[#073B6B] transition hover:bg-white/70 md:hidden"
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* MOBILE NAVIGATION DROPDOWN */}
         {mobileMenuOpen && (
-          <div className="border-t border-[#E2E8F0] px-4 pb-4 pt-3 md:hidden">
+          <div className="relative border-t border-[#E2E8F0] px-4 pb-4 pt-3 md:hidden">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
@@ -163,7 +173,6 @@ export default function Navbar() {
             </div>
           </div>
         )}
-
       </nav>
     </header>
   )

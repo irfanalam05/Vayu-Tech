@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-[#E2E8F0] bg-[#071B30] text-white">
       <div className="mx-auto max-w-7xl px-6 pt-14 pb-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-4 md:gap-12">
           {/* Company Info */}
-          <div className="md:col-span-2">
+          <div className="col-span-2 md:col-span-2">
             <h3 className="mb-4 text-2xl font-bold text-white">
               Vayu Tech
             </h3>
