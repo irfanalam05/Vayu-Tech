@@ -39,6 +39,7 @@ export default function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
     { href: '/work', label: 'Work' },
+    { href: '/courses-internship', label: 'Courses & Internship' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ]
@@ -96,13 +97,13 @@ export default function Navbar() {
                 Vayu Tech
               </span>
               <span className="mt-1 block whitespace-nowrap text-[8px] font-semibold uppercase tracking-[0.16em] text-[#64748B]">
-                Digital Solutions
+                Crafting Digital Excellence
               </span>
             </div>
           </Link>
 
           {/* DESKTOP NAVIGATION */}
-          <div className="hidden items-center gap-1 md:flex">
+          <div className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -115,7 +116,7 @@ export default function Navbar() {
           </div>
 
           {/* DESKTOP CTA */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <a
               href="https://wa.me/917303123047"
               target="_blank"
@@ -135,7 +136,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen((open) => !open)}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-[#073B6B] transition hover:bg-white/70 md:hidden"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-[#073B6B] transition hover:bg-white/70 lg:hidden"
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileMenuOpen}
           >
@@ -145,7 +146,7 @@ export default function Navbar() {
 
         {/* MOBILE NAVIGATION DROPDOWN */}
         {mobileMenuOpen && (
-          <div className="relative border-t border-[#E2E8F0] px-4 pb-4 pt-3 md:hidden">
+          <div className="relative border-t border-[#E2E8F0] px-4 pb-4 pt-3 lg:hidden">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link

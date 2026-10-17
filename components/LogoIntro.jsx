@@ -32,8 +32,8 @@ export default function LogoIntro() {
           VAYU TECH
         </h1>
 
-        <p className="tagline mt-3 text-xs font-semibold tracking-[0.4em] text-[#28D8B0] sm:text-sm">
-          DIGITAL SOLUTIONS
+        <p className="tagline mt-3 text-xs font-semibold uppercase tracking-[0.4em] text-[#28D8B0] sm:text-sm">
+          Crafting Digital Excellence
         </p>
       </div> */}
 
