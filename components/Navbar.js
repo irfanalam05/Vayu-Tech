@@ -127,7 +127,7 @@ export default function Navbar() {
               <img
                 src="/WhatsApp_logo.png"
                 alt="WhatsApp"
-                className="h-5 w-5 object-contain"
+                className="h-7 w-7 object-contain"
               />
             </a>
           </div>
@@ -168,7 +168,7 @@ export default function Navbar() {
                 <img
                   src="/Call_logo.png"
                   alt="Call"
-                  className="h-5 w-5 object-contain"
+                  className="h-7 w-7 object-contain"
                 />
               </a>
             </div>
