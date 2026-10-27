@@ -14,7 +14,7 @@ export default function FloatingContact() {
         <img
           src="/WhatsApp_logo.png"
           alt="WhatsApp"
-          className="h-14 w-14 object-contain"
+          className="pointer-events-none h-[4.5rem] w-[4.5rem] object-contain scale-[1.35] md:h-16 md:w-16"
         />
       </a>
 
@@ -27,7 +27,7 @@ export default function FloatingContact() {
         <img
           src="/Call_logo.png"
           alt="Call"
-          className="h-12 w-12 object-contain"
+          className="h-[4.5rem] w-[4.5rem] object-contain md:h-16 md:w-16"
         />
       </a>
     </>

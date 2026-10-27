@@ -124,11 +124,6 @@ export default function Navbar() {
               className="group inline-flex items-center gap-2 rounded-full bg-[#005098] px-5 py-2.5 text-[13px] font-bold text-white shadow-md shadow-[#005098]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#073B6B]"
             >
               Get a Quote
-              <img
-                src="/WhatsApp_logo.png"
-                alt="WhatsApp"
-                className="h-7 w-7 object-contain"
-              />
             </a>
           </div>
 
