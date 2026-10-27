@@ -338,7 +338,7 @@ ${formData.message}`
 
                 {/* Instagram */}
                 <a
-                  href="https://www.instagram.com/vayutechstudio?stkn=aTBwdmd0eDRrZHZn"
+                  href="https://www.instagram.com/wearevayutech/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-5 rounded-[24px] border border-white/10 bg-white/[0.06] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#28D8B0]/50 hover:bg-[#28D8B0]/10"
